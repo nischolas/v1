@@ -9,7 +9,6 @@ const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     padding: 0 var(--padding-outer);
-    background-color: var(--navy);
     width: 100%;
     height: var(--nav-height);
     transition: var(--transition);
@@ -18,6 +17,7 @@ const StyledHeader = styled.header`
         props.scrollDirection === "up" &&
         !props.scrolledToTop &&
         css`
+            background-color: var(--navy);
             height: var(--nav-scroll-height);
             transform: translateY(0px);
             box-shadow: 0 10px 30px -10px var(--navy-shadow);
