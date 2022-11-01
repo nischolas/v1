@@ -22,7 +22,7 @@ const BgMoving = styled.div`
     opacity: 0.5;
     background-image: radial-gradient(red 0.1rem, transparent 0);
     background-size: 40px 40px;
-    background-position: 2.5vw 2.5vw;
+    background-position: 35px 35px;
     &::before {
         content: "";
         position: absolute;

@@ -14,6 +14,10 @@ const StyledHeader = styled.header`
     height: var(--nav-height);
     transition: var(--transition);
 
+    @media (max-width: 768px) {
+        padding: 0 var(--padding-mobile);
+    }
+
     ${(props) =>
         props.scrollDirection === "up" &&
         !props.scrolledToTop &&
@@ -44,8 +48,11 @@ const StyledNav = styled.nav`
     .links ul {
         display: flex;
         justify-content: space-between;
-        gap: 2rem;
+        gap: 0.3rem;
         list-style-type: none;
+        li:last-child a {
+            padding-right: 0;
+        }
     }
 
     .ham {
@@ -93,10 +100,10 @@ export const Navbar = () => {
                 <div className="links">
                     <ul>
                         <li>
-                            <StyledNavLink>Über</StyledNavLink>
+                            <StyledNavLink>Über mich</StyledNavLink>
                         </li>
                         <li>
-                            <StyledNavLink>Arbeit</StyledNavLink>
+                            <StyledNavLink>Portfolio</StyledNavLink>
                         </li>
                         <li>
                             <StyledNavLink>Kontakt</StyledNavLink>

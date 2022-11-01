@@ -18,11 +18,12 @@ const HeroSection = styled.section`
     }
 
     h3 {
-        margin-top: -1rem;
+        margin-top: -0.5rem;
         font-weight: 800;
         font-size: clamp(var(--fz-xxl), 3vw, var(--fz-heading));
     }
     p {
+        font-weight: 700;
         margin-top: 1rem;
     }
 `;

@@ -30,6 +30,10 @@ const variables = css`
         --padding-outer: 3rem;
         --padding-inner: clamp(8rem, 10vw, 10rem);
 
+        --padding-mobile: 2rem;
+
+        --bp-mobile: 768px;
+
         --border-radius: 4px;
         --nav-height: 100px;
         --nav-scroll-height: 70px;

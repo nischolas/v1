@@ -1,9 +1,19 @@
 import { createGlobalStyle, css } from "styled-components";
 import variables from "./variables";
 
-// Workaround for formatting createGlobalStyle
+// import localFont from "@next/font/local";
+
+// const NunitoWoff = localFont({ src: "../fonts/nunito/nunito-v25-latin-regular.woff" });
+// const NunitoWoff2 = localFont({ src: "../fonts/nunito/nunito-v25-latin-regular.woff2" });
+// const NunitoLightWoff = localFont({ src: "../fonts/nunito/nunito-v25-latin-200.woff" });
+// const NunitoLightWoff2 = localFont({ src: "../fonts/nunito/nunito-v25-latin-200.woff2" });
+// const NunitoItalicWoff = localFont({ src: "../fonts/nunito/nunito-v25-latin-italic.woff" });
+// const NunitoItalicWoff2 = localFont({ src: "../fonts/nunito/nunito-v25-latin-italic.woff2" });
+// const NunitoBoldWoff = localFont({ src: "../fonts/nunito/nunito-v25-latin-800.woff" });
+// const NunitoBoldWoff2 = localFont({ src: "../fonts/nunito/nunito-v25-latin-800.woff2" });
+
+// css`` inside CGS is a workaround for formatting createGlobalStyle
 export const GlobalStyle = createGlobalStyle`${css`
-    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
     * {
         margin: 0;
         padding: 0;

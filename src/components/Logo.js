@@ -48,16 +48,16 @@ const LogoContainer = styled.div`
     @keyframes logopath2 {
         from {
             transform: scale(0.95) translate(2.5px, 2.5px);
-            opacity: 0.6;
+            opacity: 1;
         }
         50% {
             transform: scale(1) translate(0px, 0px);
-            opacity: 1;
+            opacity: 0.7;
             fill: var(--red);
         }
         to {
             transform: scale(0.95) translate(2.5px, 2.5px);
-            opacity: 0.6;
+            opacity: 1;
         }
     }
     @keyframes logopath3 {
@@ -76,7 +76,7 @@ const LogoContainer = styled.div`
 const StyledLogo = styled.svg`
     max-width: 2rem;
     path {
-        fill: var(--slate);
+        fill: var(--red);
     }
 `;
 
