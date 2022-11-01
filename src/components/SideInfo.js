@@ -11,6 +11,9 @@ const StyledSideInfo = styled.aside`
     gap: 1rem;
     bottom: 0;
     transition: var(--transition);
+    @media (max-width: 768px) {
+        display: none;
+    }
     ${(props) =>
         props.pos === "right"
             ? css`
