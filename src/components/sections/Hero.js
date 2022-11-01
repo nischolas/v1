@@ -6,7 +6,7 @@ const HeroSection = styled.section`
     max-width: 55ch;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     h2 {
         font-size: clamp(var(--fz-md), 2vw, var(--fz-xxl));
         color: var(--red);
@@ -34,6 +34,7 @@ const CtaBtn = styled.a`
     gap: 1rem;
     padding: 0.7rem 1.3rem;
     margin-top: 2rem;
+    margin-bottom: 20vh;
 
     background-color: var(--navy);
 
