@@ -5,6 +5,7 @@ import styled from "styled-components";
 const LogoContainer = styled.div`
     display: flex;
     align-items: center;
+    gap: 0.5rem;
     p {
         display: none;
         font-weight: 700;
@@ -99,7 +100,7 @@ export const Logo = () => {
                     d="M92.85,52.7,77.25,67.63a4.54,4.54,0,0,1-6.06.09,3.83,3.83,0,0,1-1.26-2.94h0V35.22h0a3.83,3.83,0,0,1,1.26-2.94,4.54,4.54,0,0,1,6.06.09L92.85,47.3A3.68,3.68,0,0,1,94,50,3.64,3.64,0,0,1,92.85,52.7Z"
                 />
             </StyledLogo>
-            <p>&nbsp;&nbsp;Nicholas Schneider</p>
+            <p>Nicholas Schneider</p>
         </LogoContainer>
     );
 };
