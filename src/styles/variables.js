@@ -2,7 +2,7 @@ import { css } from "styled-components";
 
 const variables = css`
     :root {
-        --dark-navy: #020c1b;
+        --dark-navy: #0a0c0f;
         --navy: #101419;
         --light-navy: #202030;
         --lightest-navy: #233554;
@@ -35,6 +35,7 @@ const variables = css`
         --bp-mobile: 768px;
 
         --border-radius: 4px;
+        --border-radius-lg: 8px;
         --nav-height: 100px;
         --nav-scroll-height: 70px;
 

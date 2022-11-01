@@ -83,10 +83,7 @@ export const Hero = () => {
             <h2>Hallo, ich bin</h2>
             <h1>Nicholas</h1>
             <h3>Ich baue Webseiten.</h3>
-            <p>
-                Ich bin Frontend (und manchmal auch Backend) Entwickler aus Saarbrücken, spezialisiert auf&apos;s Bauen und Entwerfen von Webseiten, <br /> Applikationen und allem, was dazwischen
-                liegt.
-            </p>
+            <p>Ich bin Frontend (und manchmal auch Backend) Entwickler aus Saarbrücken, spezialisiert auf&apos;s Bauen und Entwerfen von Webseiten, Applikationen und allem, was dazwischen liegt.</p>
             <CtaBtn href={mailtoLink}>
                 Sag hallo!
                 <FaPaperPlane />

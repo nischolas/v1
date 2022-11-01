@@ -103,7 +103,7 @@ export const Navbar = () => {
                             <StyledNavLink>Über mich</StyledNavLink>
                         </li>
                         <li>
-                            <StyledNavLink>Portfolio</StyledNavLink>
+                            <StyledNavLink href="#portfolio">Portfolio</StyledNavLink>
                         </li>
                         <li>
                             <StyledNavLink>Kontakt</StyledNavLink>
