@@ -4,6 +4,7 @@ import { Navbar } from "src/components/sections/Navbar";
 import styled from "styled-components";
 import { GlobalStyle } from "src/styles/GlobalStyle";
 import { SideInfo } from "./SideInfo";
+import { Background } from "./Background";
 
 export const Layout = ({ children, title }) => {
     return (
@@ -19,6 +20,7 @@ export const Layout = ({ children, title }) => {
                 {/* FAVICON */}
             </Head>
             <GlobalStyle />
+            <Background />
 
             <Navbar />
             <SideInfo pos={"right"}>
