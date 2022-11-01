@@ -32,25 +32,26 @@ const CtaBtn = styled.a`
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.3rem;
     margin-top: 2rem;
-    border-color: transparent;
+
     background-color: var(--navy);
-    border-style: solid;
+
     border-radius: var(--border-radius);
     width: fit-content;
     color: var(--red);
     transition: var(--transition);
     font-weight: bold;
-    --border-width: 0.3rem;
-    /* border-image-slice: 1;
-    border-image-source: linear-gradient(to right, var(--red), var(--red)); */
+    --border-width: 0px;
+    background-color: var(--light-navy);
+
     svg {
         transition: var(--transition);
     }
+
     &::before {
-        transition: var(--transition);
         content: "";
+        transition: var(--transition);
         position: absolute;
         background-color: var(--red);
         z-index: -1;
@@ -63,15 +64,12 @@ const CtaBtn = styled.a`
         right: calc(-1 * var(--border-width));
     }
     &:hover {
-        gap: 1.5rem;
-        /* border-image-source: linear-gradient(to right, var(--red) 0%, rgba(0, 0, 0, 0) 80%); */
+        gap: 1rem;
+        background-color: var(--navy);
+        --border-width: 2px;
+
         svg {
-            transform: scale(2);
-        }
-        &::before {
-            --border-width: 0.3rem;
-            background-color: transparent;
-            background-image: linear-gradient(to right, var(--red), rgba(0, 0, 0, 0) 80%);
+            transform: scale(1.2);
         }
     }
 `;
