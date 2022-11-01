@@ -48,5 +48,10 @@ export const Layout = ({ children, title }) => {
 
 export const Container = styled.main`
     padding: 0 var(--padding-inner);
+    max-width: 1400px;
+    margin: 0 auto;
     min-height: 100vh;
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
 `;
