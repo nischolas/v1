@@ -39,6 +39,9 @@ const variables = css`
 
         --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
         --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        --purple: rgb(123, 31, 162);
+        --violet: rgb(103, 58, 183);
+        --pink: rgb(244, 143, 177);
     }
 `;
 

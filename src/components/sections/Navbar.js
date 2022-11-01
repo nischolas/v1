@@ -1,7 +1,8 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import useScrollDirection from "src/hooks/useScrollDir";
 import { useEffect, useState } from "react";
 import { Logo } from "@components/Logo";
+import Link from "next/link";
 
 const StyledHeader = styled.header`
     position: fixed;
@@ -50,6 +51,22 @@ const StyledNav = styled.nav`
     .ham {
         display: none;
     }
+
+    .logo {
+        cursor: pointer;
+    }
+`;
+
+const StyledNavLink = styled.a`
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition: var(--transition);
+
+    &:hover {
+        color: var(--red);
+    }
 `;
 
 export const Navbar = () => {
@@ -70,14 +87,20 @@ export const Navbar = () => {
     return (
         <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
             <StyledNav>
-                <div className="logo">
+                <Link href="/" className="logoddd">
                     <Logo />
-                </div>
+                </Link>
                 <div className="links">
                     <ul>
-                        <li>Über</li>
-                        <li>Arbeit</li>
-                        <li>Kontakt</li>
+                        <li>
+                            <StyledNavLink>Über</StyledNavLink>
+                        </li>
+                        <li>
+                            <StyledNavLink>Arbeit</StyledNavLink>
+                        </li>
+                        <li>
+                            <StyledNavLink>Kontakt</StyledNavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="ham">=</div>
