@@ -83,7 +83,7 @@ const StyledLogo = styled.svg`
 export const Logo = () => {
     return (
         <LogoContainer>
-            <StyledLogo width="100" height="100" className="max-w-xxxs lg:max-w-xxs" id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <StyledLogo width="100" height="100" id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <path
                     id="L"
                     className="logo-path logo-path-1 "
