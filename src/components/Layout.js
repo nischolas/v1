@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { GlobalStyle } from "src/styles/GlobalStyle";
 import { SideInfo } from "./SideInfo";
 import { Background } from "./Background";
+import { FaInstagram, FaGithub, FaCodepen } from "react-icons/fa";
 
 export const Layout = ({ children, title }) => {
     return (
@@ -27,9 +28,15 @@ export const Layout = ({ children, title }) => {
                 <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
             </SideInfo>
             <SideInfo pos={"left"}>
-                <p>x</p>
-                <p>x</p>
-                <p>x</p>
+                <a href="">
+                    <FaGithub />
+                </a>
+                <a href="">
+                    <FaInstagram />
+                </a>
+                <a href="">
+                    <FaCodepen />
+                </a>
             </SideInfo>
 
             <Container>{children}</Container>

@@ -8,6 +8,7 @@ const StyledSideInfo = styled.aside`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     bottom: 0;
     transition: var(--transition);
     ${(props) =>
@@ -43,10 +44,15 @@ const StyledSideInfo = styled.aside`
         width: 2px;
         height: 80px;
         background-color: var(--slate);
-        margin-top: 1rem;
     }
     a {
+        margin: 0;
+        padding: 0;
         writing-mode: vertical-rl;
+        transition: var(--transition);
+        &:hover {
+            color: var(--red);
+        }
     }
 `;
 
