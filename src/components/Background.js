@@ -5,6 +5,8 @@ const BgContainer = styled.div`
     position: fixed;
     --pers: 400px;
     perspective: var(--pers);
+    display: flex;
+    align-items: flex-end;
     width: 100vw;
     height: 100vh;
     bottom: 0;
@@ -14,12 +16,20 @@ const BgMoving = styled.div`
     --rotation: ${(props) => props.rotation}deg;
     --translation: ${(props) => props.translation}vh;
     transform: rotateX(var(--rotation)) translateY(var(--translation));
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 90%;
     opacity: 0.5;
-    background-image: radial-gradient(red 1px, transparent 0);
-    background-size: 3vw 3vw;
+    background-image: radial-gradient(red 0.1rem, transparent 0);
+    background-size: 40px 40px;
     background-position: 2.5vw 2.5vw;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, var(--navy), rgba(0, 0, 0, 0) 50%);
+    }
 `;
 
 export const Background = () => {
