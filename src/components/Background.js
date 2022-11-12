@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const BgContainer = styled.div`
     position: fixed;
@@ -13,9 +13,6 @@ const BgContainer = styled.div`
     z-index: -99999;
 `;
 const BgMoving = styled.div`
-    --rotation: ${(props) => props.rotation}deg;
-    --translation: ${(props) => props.translation}vh;
-    transform: rotateX(var(--rotation)) translateY(var(--translation));
     position: relative;
     width: 100%;
     height: 90%;
@@ -33,8 +30,8 @@ const BgMoving = styled.div`
 `;
 
 export const Background = () => {
-    const [rotation, setRotation] = useState(0);
-    const [translation, setTranslation] = useState(0);
+    const BgMovingref = useRef(null);
+
     const getMinToMaxPercent = (percent, min, max) => {
         let range = max - min;
         let x = (range / 100) * percent;
@@ -51,9 +48,12 @@ export const Background = () => {
         let range = pageHeight - viewportHeight;
         let percentScrolled = (scrollTop / range) * 100;
 
-        setRotation(getMinToMaxPercent(percentScrolled, 0, 70));
-        setTranslation(getMinToMaxPercent(percentScrolled, 0, 30));
+        const rotation = getMinToMaxPercent(percentScrolled, 0, 70);
+        const translation = getMinToMaxPercent(percentScrolled, 0, 30);
+
+        BgMovingref.current.style.transform = `rotateX(${rotation}deg) translateY(${translation}vh)`;
     };
+
     useEffect(() => {
         window.addEventListener("scroll", scrolling);
         return () => {
@@ -63,7 +63,7 @@ export const Background = () => {
 
     return (
         <BgContainer>
-            <BgMoving rotation={rotation} translation={translation} />
+            <BgMoving ref={BgMovingref} />
         </BgContainer>
     );
 };
