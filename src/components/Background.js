@@ -3,13 +3,12 @@ import { useEffect, useRef, useState } from "react";
 
 const BgContainer = styled.div`
     position: fixed;
-    --pers: 400px;
-    perspective: var(--pers);
+    perspective: 600px;
     display: flex;
     align-items: flex-end;
-    width: 100vw;
+    width: 300vw;
     height: 100vh;
-    bottom: 0;
+    transform: translateX(-100vw);
     z-index: -99999;
 `;
 const BgMoving = styled.div`
@@ -24,8 +23,8 @@ const BgMoving = styled.div`
         content: "";
         position: absolute;
         width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to bottom, var(--navy), rgba(0, 0, 0, 0) 50%);
+        height: 50%;
+        background-image: linear-gradient(to bottom, var(--navy), rgba(0, 0, 0, 0) 100%);
     }
 `;
 
