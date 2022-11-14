@@ -6,6 +6,7 @@ import { GlobalStyle } from "src/styles/GlobalStyle";
 import { SideInfo } from "./SideInfo";
 import { Background } from "./Background";
 import { FaInstagram, FaGithub, FaCodepen } from "react-icons/fa";
+import { FollowingDot as Dot } from "@components/FollowingDot";
 
 export const Layout = ({ children, title }) => {
     return (
@@ -20,8 +21,10 @@ export const Layout = ({ children, title }) => {
                 <title>{`${title ? title + " | " : ""}Nicholas Schneider`}</title>
                 {/* FAVICON */}
             </Head>
+
             <GlobalStyle />
             <Background />
+            <Dot />
 
             <Navbar />
             <SideInfo pos={"right"}>

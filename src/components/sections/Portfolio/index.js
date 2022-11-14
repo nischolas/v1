@@ -1,6 +1,7 @@
 import { data as projects } from "./data.js";
 import { Project } from "./Project.js";
 import styled from "styled-components";
+import { DotTarget } from "@components/FollowingDot/index.js";
 
 const PortfolioWrapper = styled.div`
     margin-top: 10rem;
@@ -35,6 +36,7 @@ export const Portfolio = () => {
     return (
         <PortfolioWrapper id="portfolio">
             <h2>Portfolio</h2>
+            <DotTarget />
             <ProjectsWrapper>
                 {projects.map((project, index) => (
                     <Project key={index} project={project} />

@@ -44,6 +44,9 @@ const variables = css`
 
         --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
         --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        --dot-animation-time: 0.7s;
+        --dot-animation-timing: cubic-bezier(0.6, 0, 0.3, 1);
     }
 `;
 

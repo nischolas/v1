@@ -1,3 +1,4 @@
+import { DotTarget } from "@components/FollowingDot";
 import styled from "styled-components";
 
 const AboutWrapper = styled.div`
@@ -48,6 +49,7 @@ export const About = () => {
     return (
         <AboutWrapper id="about">
             <h2>Über mich</h2>
+            <DotTarget />
             <div className="split">
                 <div className="about-text">
                     <p>

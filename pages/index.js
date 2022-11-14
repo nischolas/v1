@@ -1,5 +1,5 @@
 import { About } from "@components/sections/About";
-import { Portfolio } from "@components/sections/Portfolio/index";
+import { Portfolio } from "@components/sections/Portfolio";
 import { Layout } from "src/components/Layout";
 import Hero from "src/components/sections/Hero";
 
