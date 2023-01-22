@@ -71,7 +71,7 @@ export const Footer = () => {
     return (
         <Container>
             <StyledContact>
-                <h1>Worauf wartest du?</h1>
+                <Headline center text="Worauf wartest du?" />
                 <h3>Ich bin immer auf der Suche nach neuen und herausfordernden Projekten.</h3>
                 <CtaBtn href="mailto:hallo@nicholas-schneider.de">
                     Sag hallo!

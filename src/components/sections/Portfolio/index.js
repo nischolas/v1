@@ -5,22 +5,6 @@ import { Headline } from "@components/Headline.js";
 
 const PortfolioWrapper = styled.div`
     margin-top: 10rem;
-    h2 {
-        color: var(--red);
-        margin-bottom: 3rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        font-size: 3rem;
-        &::before {
-            content: "";
-            background-color: var(--red);
-            position: relative;
-            width: 10%;
-            height: 2px;
-            border-radius: var(--border-radius);
-        }
-    }
 `;
 
 const ProjectsWrapper = styled.ul`

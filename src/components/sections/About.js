@@ -13,6 +13,10 @@ const AboutWrapper = styled.div`
         @media (max-width: 768px) {
             flex-direction: column;
         }
+        h2 {
+            grid-area: 1 / 1 / 2 / 3;
+            place-self: end start;
+        }
     }
 
     .about-text {
@@ -54,9 +58,8 @@ const AboutWrapper = styled.div`
 export const About = () => {
     return (
         <AboutWrapper id="ueber-mich">
-            <Headline text="Über mich" />
-
             <div className="split">
+                <Headline text="Über mich" />
                 <div className="about-text">
                     <p>
                         Herzlich willkommen auf meiner Webseite! Ich bin ein gelernter Mediengestalter aus Saarbrücken und habe mir in meiner Freizeit selbst die Welt der Webentwicklung beigebracht.
