@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaPaperPlane } from "react-icons/fa";
-import { DotTarget } from "@components/FollowingDot";
 import { CtaBtn } from "@components/CtaBtn";
 
 const HeroSection = styled.section`

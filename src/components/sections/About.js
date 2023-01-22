@@ -1,4 +1,3 @@
-import { DotTarget } from "@components/FollowingDot";
 import { Headline } from "@components/Headline";
 import styled from "styled-components";
 
