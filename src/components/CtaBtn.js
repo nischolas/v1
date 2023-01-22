@@ -16,7 +16,7 @@ const StyledCtaBtn = styled.a`
     color: var(--red);
     transition: var(--transition);
     font-weight: bold;
-    --border-width: 0px;
+    --border-width: 2px;
     background-color: var(--light-navy);
 
     svg {
@@ -40,7 +40,7 @@ const StyledCtaBtn = styled.a`
     &:hover {
         gap: 1rem;
         background-color: var(--navy);
-        --border-width: 2px;
+        --border-width: 4px;
 
         svg {
             transform: scale(1.2);
