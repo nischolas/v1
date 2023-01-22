@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const Trailer = styled.div`
     height: 25px;
     width: 25px;
-    background-color: white;
+    background-color: ${(props) => (props.interacting ? "transparent" : "white")};
     border-radius: 25px;
 
     position: fixed;
@@ -21,6 +21,8 @@ const Trailer = styled.div`
     display: grid;
     place-items: center;
     cursor: none;
+    color: white;
+    text-shadow: 1px 1px 1px 1px red;
 `;
 
 export const Cursor = () => {
@@ -29,18 +31,18 @@ export const Cursor = () => {
     const TrailerRef = useRef(null);
 
     const textEls = new Set(["H1", "H2", "H3", "H4", "H5", "H6", "P", "SPAN", "LI"]);
-    const iLinkEls = new Set(["A"]);
+    const iLinkEls = new Set(["A", "SVG"]);
 
     const animateTrailer = (e, interacting, trailer) => {
         const x = e.clientX - trailer.offsetWidth / 2,
             y = e.clientY - trailer.offsetHeight / 2;
 
         const keyframes = {
-            transform: `translate(${x}px, ${y}px) scale(${interacting ? 1.3 : 1})`,
+            transform: `translate(${x}px, ${y}px) scale(${interacting ? 1.5 : 1})`,
         };
 
         trailer.animate(keyframes, {
-            duration: 100,
+            duration: 50,
             fill: "forwards",
         });
     };

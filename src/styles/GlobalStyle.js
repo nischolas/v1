@@ -50,11 +50,11 @@ export const GlobalStyle = createGlobalStyle`${css`
         font-size: var(--fz-xl);
         line-height: 1.3;
 
-        /* cursor: none !important; */
+        cursor: none !important;
     }
 
     a {
-        /* cursor: none !important; */
+        cursor: none !important;
         color: inherit;
         text-decoration: none;
     }
