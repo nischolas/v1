@@ -10,6 +10,7 @@ const LogoContainer = styled.div`
         display: none;
         font-weight: 700;
         font-size: 1.1rem;
+        line-height: 1;
         @media (min-width: 600px) {
             display: inline-block;
         }
@@ -53,7 +54,6 @@ const LogoContainer = styled.div`
         50% {
             transform: scale(1) translate(0px, 0px);
             opacity: 0.7;
-            fill: var(--red);
         }
         to {
             transform: scale(0.95) translate(2.5px, 2.5px);
@@ -76,14 +76,14 @@ const LogoContainer = styled.div`
 const StyledLogo = styled.svg`
     max-width: 2rem;
     path {
-        fill: var(--red);
+        fill: ${(props) => (props.color ? props.color : "var(--red)")};
     }
 `;
 
-export const Logo = () => {
+export const Logo = ({ notext, color }) => {
     return (
-        <LogoContainer>
-            <StyledLogo width="100" height="100" id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <LogoContainer notext={notext}>
+            <StyledLogo color={color} width="100" height="100" id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <path
                     id="L"
                     className="logo-path logo-path-1 "
@@ -100,7 +100,15 @@ export const Logo = () => {
                     d="M92.85,52.7,77.25,67.63a4.54,4.54,0,0,1-6.06.09,3.83,3.83,0,0,1-1.26-2.94h0V35.22h0a3.83,3.83,0,0,1,1.26-2.94,4.54,4.54,0,0,1,6.06.09L92.85,47.3A3.68,3.68,0,0,1,94,50,3.64,3.64,0,0,1,92.85,52.7Z"
                 />
             </StyledLogo>
-            <p>Nicholas Schneider</p>
+            {notext ? (
+                <p>
+                    Nicholas
+                    <br />
+                    Schneider
+                </p>
+            ) : (
+                <p>Nicholas Schneider</p>
+            )}
         </LogoContainer>
     );
 };

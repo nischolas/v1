@@ -22,13 +22,6 @@ export const FollowingDot = () => {
             };
         };
 
-        const setInitalDotPos = (el, target) => {
-            const { x, y } = getElXY(target);
-            const { top, left } = getBodyMargin();
-
-            el.style.transform = `translate(${x - top}px, ${y - left}px)`;
-        };
-
         const flyTo = (el, target) => {
             el.classList.remove("ani");
             const targetXY = getElXY(target);
@@ -50,13 +43,30 @@ export const FollowingDot = () => {
 
         const dot = dotRef.current;
         const targets = document.querySelectorAll(".dot-target");
-        setInitalDotPos(dot, targets[0]);
+
+        // if (document.readyState === "complete") {
+        //     flyTo(dot, targets[0]);
+        // } else {
+        //     window.addEventListener("load", flyTo(dot, targets[0]));
+        // }
+
+        window.onresize = () => {
+            handleResize();
+        };
+
+        const handleResize = () => {
+            const dotXY = getElXY(dot);
+            const elXY = getElXY(targets[currentOrigin]);
+            const distanceX = elXY.x - dotXY.x;
+            const distanceY = elXY.y - dotXY.y;
+            const { top, left } = getBodyMargin();
+            dot.style.transform = `translate(${dotXY.x - left + distanceX}px, ${dotXY.y - top + window.scrollY + distanceY}px)`;
+        };
 
         const slideDivObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        console.log("kick");
                         flyTo(dot, entry.target);
                     }
                 });
@@ -64,7 +74,7 @@ export const FollowingDot = () => {
             {
                 root: null,
                 threshold: 1,
-                rootMargin: "-100px 0px",
+                rootMargin: "0px 0px",
             }
         );
 

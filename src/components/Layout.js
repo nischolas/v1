@@ -7,6 +7,7 @@ import { SideInfo } from "./SideInfo";
 import { Background } from "./Background";
 import { FaInstagram, FaGithub, FaCodepen } from "react-icons/fa";
 import { FollowingDot as Dot } from "@components/FollowingDot";
+import { Cursor } from "./Cursor";
 
 export const Layout = ({ children, title }) => {
     return (
@@ -25,6 +26,7 @@ export const Layout = ({ children, title }) => {
             <GlobalStyle />
             <Background />
             <Dot />
+            <Cursor />
 
             <Navbar />
             <SideInfo pos={"right"}>

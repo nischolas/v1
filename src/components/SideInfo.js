@@ -37,8 +37,8 @@ const StyledSideInfo = styled.aside`
         props.scrollDirection === "down" &&
         !props.scrolledToTop &&
         css`
-            opacity: 0;
-            transform: translateY(10px);
+            /* opacity: 0; */
+            transform: translateY(50px);
         `};
 
     &::after {

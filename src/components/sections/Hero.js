@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { FaPaperPlane } from "react-icons/fa";
+import { DotTarget } from "@components/FollowingDot";
+import { CtaBtn } from "@components/CtaBtn";
 
 const HeroSection = styled.section`
     min-height: 100vh;
@@ -35,63 +37,14 @@ const HeroSection = styled.section`
     }
 `;
 
-const CtaBtn = styled.a`
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.7rem 1.3rem;
-    margin-top: 2rem;
-    margin-bottom: 25vh;
-
-    background-color: var(--navy);
-
-    border-radius: var(--border-radius);
-    width: fit-content;
-    color: var(--red);
-    transition: var(--transition);
-    font-weight: bold;
-    --border-width: 0px;
-    background-color: var(--light-navy);
-
-    svg {
-        transition: var(--transition);
-    }
-
-    &::before {
-        content: "";
-        transition: var(--transition);
-        position: absolute;
-        background-color: var(--red);
-        z-index: -1;
-        border-radius: var(--border-radius);
-        height: calc(100% + (2 * var(--border-width)));
-        width: calc(100% + (2 * var(--border-width)));
-        top: calc(-1 * var(--border-width));
-        bottom: calc(-1 * var(--border-width));
-        left: calc(-1 * var(--border-width));
-        right: calc(-1 * var(--border-width));
-    }
-    &:hover {
-        gap: 1rem;
-        background-color: var(--navy);
-        --border-width: 2px;
-
-        svg {
-            transform: scale(1.2);
-        }
-    }
-`;
-
 export const Hero = () => {
-    const mailtoLink = "mailto:hallo@nicholas-schneider.de";
     return (
-        <HeroSection>
+        <HeroSection id="start">
             <h2>Hallo, ich bin</h2>
             <h1>Nicholas</h1>
             <h3>Ich baue Webseiten.</h3>
             <p>Ich bin Frontend (und manchmal auch Backend) Entwickler aus Saarbrücken, spezialisiert auf&apos;s Bauen und Entwerfen von Webseiten, Applikationen und allem, was dazwischen liegt.</p>
-            <CtaBtn href={mailtoLink}>
+            <CtaBtn href={"mailto:hallo@nicholas-schneider.de"}>
                 Sag hallo!
                 <FaPaperPlane />
             </CtaBtn>

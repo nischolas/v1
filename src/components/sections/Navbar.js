@@ -33,8 +33,10 @@ const StyledHeader = styled.header`
         !props.scrolledToTop &&
         css`
             height: var(--nav-scroll-height);
-            transform: translateY(calc(var(--nav-scroll-height) * -1));
+            /* transform: translateY(calc(var(--nav-scroll-height) * -1)); */
             box-shadow: 0 10px 30px -10px var(--navy-shadow);
+            backdrop-filter: blur(10px);
+            background-color: rgba(16, 20, 25, 0.8);
         `};
 `;
 
@@ -100,13 +102,13 @@ export const Navbar = () => {
                 <div className="links">
                     <ul>
                         <li>
-                            <StyledNavLink>Über mich</StyledNavLink>
+                            <StyledNavLink href="#ueber-mich">Über mich</StyledNavLink>
                         </li>
                         <li>
                             <StyledNavLink href="#portfolio">Portfolio</StyledNavLink>
                         </li>
                         <li>
-                            <StyledNavLink>Kontakt</StyledNavLink>
+                            <StyledNavLink href="#kontakt">Kontakt</StyledNavLink>
                         </li>
                     </ul>
                 </div>

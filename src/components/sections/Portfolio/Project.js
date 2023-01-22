@@ -34,7 +34,7 @@ const ProjectListItem = styled.li`
         img {
             max-width: 100%;
             mix-blend-mode: multiply;
-            filter: grayscale(100%) contrast(100%) brightness(100%);
+            filter: grayscale(0%) contrast(100%) brightness(100%);
             transition: filter var(--easing);
 
             @media (max-width: 768px) {
@@ -64,7 +64,6 @@ const ProjectListItem = styled.li`
             grid-column: 1 / -1;
             padding: 0px 1.5rem;
             text-align: left;
-            // background-color: rgba(16, 20, 25, 0.9);
         }
     }
 
@@ -105,16 +104,21 @@ const ProjectListItem = styled.li`
     }
 
     .project-description {
-        box-shadow: 0 10px 30px -15px black;
         transition: var(--transition);
         position: relative;
         z-index: 2;
         padding: 25px;
-        border-radius: var(--border-radius-lg);
-        background-color: var(--dark-navy);
-        color: var(--light-slate);
+        color: var(--dark-navy);
         font-size: 1.2rem;
+        font-weight: 700;
         margin-bottom: 1rem;
+
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(7.5px);
+        border: 1px solid rgba(255, 255, 255, 0.31);
 
         @media (max-width: 768px) {
             background-color: transparent;
