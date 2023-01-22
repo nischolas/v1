@@ -15,8 +15,8 @@ const Trailer = styled.div`
     z-index: 10000;
 
     pointer-events: none;
-    opacity: 1;
-    transition: opacity 500ms ease;
+    /* opacity: ${(props) => (props.interacting ? "0" : "1")}; */
+    transition: all 500ms ease;
 
     display: grid;
     place-items: center;
@@ -49,13 +49,15 @@ export const Cursor = () => {
         const trailer = TrailerRef.current;
         window.onmousemove = (e) => {
             animateTrailer(e, interacting, trailer);
-            if (textEls.has(e.target.tagName)) {
+            if (textEls.has(e.target.tagName) && icon !== "text") {
                 setInteracting(true);
-                setIcon(<TbCursorText />);
-            } else if (iLinkEls.has(e.target.tagName)) {
+                setIcon("text");
+            }
+            if (iLinkEls.has(e.target.tagName) && icon !== "link") {
                 setInteracting(true);
-                setIcon(<HiLink />);
-            } else {
+                setIcon("link");
+            }
+            if (icon !== null && !iLinkEls.has(e.target.tagName) && !textEls.has(e.target.tagName)) {
                 setInteracting(false);
                 setIcon(null);
             }
@@ -66,5 +68,9 @@ export const Cursor = () => {
         };
     });
 
-    return <Trailer ref={TrailerRef}>{icon}</Trailer>;
+    return (
+        <Trailer interacting={interacting} ref={TrailerRef}>
+            {icon === "text" ? <TbCursorText /> : icon === "link" ? <HiLink /> : null}
+        </Trailer>
+    );
 };
