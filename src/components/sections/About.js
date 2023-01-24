@@ -10,12 +10,13 @@ const AboutWrapper = styled.div`
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 200px min-content 200px;
         gap: 0px 0px;
-        @media (max-width: 768px) {
-            flex-direction: column;
-        }
         h2 {
-            grid-area: 1 / 1 / 2 / 3;
+            grid-area: 1 / 1 / 2 / 4;
             place-self: end start;
+            z-index: 3;
+            @media (max-width: 768px) {
+                grid-area: 1 / 1 / 2 / 3;
+            }
         }
     }
 
@@ -27,9 +28,11 @@ const AboutWrapper = styled.div`
         padding-right: 20%;
         line-height: 1.6;
         grid-area: 2 / 1 / 3 / 4;
-
         @media (max-width: 768px) {
-            margin-bottom: 2rem;
+            padding-right: 0;
+            /* padding-top: 10%; */
+            z-index: 2;
+            grid-area: 2 / 1 / 4 / 5;
         }
 
         .tools-wrapper {
@@ -53,10 +56,13 @@ const AboutWrapper = styled.div`
     }
 
     .about-img {
-        grid-area: 1 / 3 / 4 / 5;
         z-index: 1;
         place-self: center;
         max-width: 80%;
+        grid-area: 1 / 3 / 4 / 5;
+        @media (max-width: 768px) {
+            grid-area: 1 / 3 / 2 / 5;
+        }
         img {
             filter: drop-shadow(0px -2px 10px var(--dark-navy));
             width: 100%;
@@ -78,7 +84,7 @@ export const About = () => {
                         Ich liebe es, neue Technologien und Entwicklungen in diesem Bereich zu erforschen und anzuwenden.
                     </p>
                     <br />
-                    <p>Mit diesen Tools arbeite ich</p>
+                    <p>Mit diesen Tools arbeite ich:</p>
                     <div className="tools-wrapper">
                         <ul>
                             <li>Javascript (ES6+)</li>
