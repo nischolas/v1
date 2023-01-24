@@ -53,7 +53,7 @@ export const Container = styled.main`
     padding: 0 var(--padding-inner);
     max-width: 1400px;
     margin: 0 auto;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     @media (max-width: 768px) {
         padding: var(--padding-mobile);
     }

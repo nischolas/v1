@@ -16,7 +16,7 @@ const StyledContact = styled.div`
 
 const StyledFooter = styled.footer`
     ${glassStyle};
-    margin-top: 5rem;
+    margin-top: 0rem;
     padding: 25px;
     font-weight: 700;
 
@@ -60,6 +60,7 @@ const Credits = styled.p`
     text-align: center;
     color: var(--red);
     margin-top: 3rem;
+    margin-bottom: 3rem;
     font-weight: 700;
 `;
 
@@ -67,7 +68,7 @@ export const Footer = () => {
     return (
         <Container>
             <StyledContact>
-                <Headline center text="Worauf wartest du?" />
+                <Headline center text="Worauf wartest Du?" />
                 <h3>Ich bin immer auf der Suche nach neuen und herausfordernden Projekten.</h3>
                 <CtaBtn href="mailto:hallo@nicholas-schneider.de">
                     Sag hallo!
