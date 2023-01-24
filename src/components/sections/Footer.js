@@ -4,6 +4,7 @@ import { Container } from "@components/Layout";
 import { Logo } from "@components/Logo";
 import { FaPaperPlane } from "react-icons/fa";
 import styled from "styled-components";
+import { glassStyle } from "../../styles/variables";
 
 const StyledContact = styled.div`
     margin-top: 20rem;
@@ -14,14 +15,8 @@ const StyledContact = styled.div`
 `;
 
 const StyledFooter = styled.footer`
+    ${glassStyle};
     margin-top: 5rem;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.5px);
-    border: 1px solid rgba(255, 255, 255, 0.31);
-    color: var(--dark-navy);
     padding: 25px;
     font-weight: 700;
 
@@ -43,12 +38,12 @@ const StyledFooter = styled.footer`
                 line-height: 1.7;
                 font-weight: 800;
                 a {
-                    color: var(--dark-navy);
+                    color: inherit;
                     font-weight: 600;
                 }
                 a:hover {
                     text-decoration: underline;
-                    color: black;
+                    color: white;
                 }
             }
             li:first-child {
@@ -65,6 +60,8 @@ const Credits = styled.p`
     text-align: center;
     color: var(--red);
     margin-top: 3rem;
+    font-weight: 700;
+    text-shadow: ;
 `;
 
 export const Footer = () => {
@@ -80,7 +77,7 @@ export const Footer = () => {
             </StyledContact>
             <StyledFooter id="kontakt">
                 <div className="lists">
-                    <Logo notext color={"var(--dark-navy)"} />
+                    <Logo notext color={"var(--white)"} />
                     <ul>
                         <li>Kontakt</li>
                         <li>

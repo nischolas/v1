@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaLink } from "react-icons/fa";
+import { glassStyle } from "../../../styles/variables";
 
 const ProjectListItem = styled.li`
     display: grid;
@@ -108,17 +109,11 @@ const ProjectListItem = styled.li`
         position: relative;
         z-index: 2;
         padding: 25px;
-        color: var(--dark-navy);
         font-size: 1.2rem;
         font-weight: 700;
         margin-bottom: 1rem;
 
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.5px);
-        border: 1px solid rgba(255, 255, 255, 0.31);
+        ${glassStyle};
 
         @media (max-width: 768px) {
             background-color: transparent;

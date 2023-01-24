@@ -1,5 +1,6 @@
 import { Headline } from "@components/Headline";
 import styled from "styled-components";
+import { glassStyle } from "../../styles/variables";
 
 const AboutWrapper = styled.div`
     margin-top: 10rem;
@@ -19,22 +20,35 @@ const AboutWrapper = styled.div`
     }
 
     .about-text {
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(7.5px);
-        -webkit-backdrop-filter: blur(7.5px);
-        border: 1px solid rgba(255, 255, 255, 0.31);
-        color: var(--dark-navy);
+        ${glassStyle};
         font-weight: 700;
 
         padding: 25px;
         padding-right: 20%;
+        line-height: 1.6;
         grid-area: 2 / 1 / 3 / 4;
 
         @media (max-width: 768px) {
             margin-bottom: 2rem;
+        }
+
+        .tools-wrapper {
+            display: flex;
+            gap: 2rem;
+
+            ul {
+                list-style-type: none;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.3em;
+                    &::before {
+                        content: "❯";
+                        font-size: 1rem;
+                        color: var(--slate);
+                    }
+                }
+            }
         }
     }
 
@@ -44,12 +58,11 @@ const AboutWrapper = styled.div`
         place-self: center;
         max-width: 80%;
         img {
-            mix-blend-mode: multiply;
-            filter: grayscale(0%) contrast(100%) brightness(100%);
+            filter: drop-shadow(0px -2px 10px var(--dark-navy));
             width: 100%;
             max-width: 100%;
             height: auto;
-            clip-path: inset(0 0 0 0 round 5% 5% 50% 50%);
+            clip-path: inset(0 0 0 0 round 0% 0% 20% 20%);
         }
     }
 `;
@@ -62,11 +75,24 @@ export const About = () => {
                 <div className="about-text">
                     <p>
                         Herzlich willkommen auf meiner Webseite! Ich bin ein gelernter Mediengestalter aus Saarbrücken und habe mir in meiner Freizeit selbst die Welt der Webentwicklung beigebracht.
-                        Ich liebe es, neue Technologien und Entwicklungen in diesem Bereich zu erforschen und anzuwenden. In meiner Freizeit genieße ich die Natur, was mich inspiriert und mir dabei
-                        hilft, kreative Lösungen für Projekte zu finden.
-                        <br />
-                        Ich freue mich darauf, meine Fähigkeiten in Deinem Projekt einzubringen und gemeinsam mit Dir erfolgreich zu sein.
+                        Ich liebe es, neue Technologien und Entwicklungen in diesem Bereich zu erforschen und anzuwenden.
                     </p>
+                    <br />
+                    <p>Mit diesen Tools arbeite ich</p>
+                    <div className="tools-wrapper">
+                        <ul>
+                            <li>Javascript (ES6+)</li>
+                            <li>React</li>
+                            <li>Next.js</li>
+                            <li>Astro JS</li>
+                        </ul>
+                        <ul>
+                            <li>Tailwind CSS</li>
+                            <li>Styled Components</li>
+                            <li>Node.js</li>
+                            <li>Express JS</li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="about-img">
                     <div className="person">
