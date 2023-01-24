@@ -61,7 +61,6 @@ const Credits = styled.p`
     color: var(--red);
     margin-top: 3rem;
     font-weight: 700;
-    text-shadow: ;
 `;
 
 export const Footer = () => {
