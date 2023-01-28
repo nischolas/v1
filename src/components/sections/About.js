@@ -84,7 +84,7 @@ export const About = () => {
                         Ich liebe es, neue Technologien und Entwicklungen in diesem Bereich zu erforschen und anzuwenden.
                     </p>
                     <br />
-                    <p>Mit diesen Tools arbeite ich:</p>
+                    <p>Diese Tools habe ich kürzlich benutzt:</p>
                     <div className="tools-wrapper">
                         <ul>
                             <li>Javascript (ES6+)</li>
