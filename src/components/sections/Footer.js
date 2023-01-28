@@ -25,6 +25,11 @@ const StyledFooter = styled.footer`
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        gap: 2rem;
+        /* flex-wrap: wrap; */
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
         > * {
             width: 25%;
         }
@@ -33,6 +38,11 @@ const StyledFooter = styled.footer`
         }
         ul {
             list-style-type: none;
+            &:nth-child(2) {
+                li {
+                    width: min-content;
+                }
+            }
 
             li {
                 line-height: 1.7;
