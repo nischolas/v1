@@ -38,6 +38,9 @@ const AboutWrapper = styled.div`
         .tools-wrapper {
             display: flex;
             gap: 2rem;
+            @media (max-width: 768px) {
+                gap: 0rem;
+            }
 
             ul {
                 list-style-type: none;
@@ -65,10 +68,12 @@ const AboutWrapper = styled.div`
         }
         img {
             filter: drop-shadow(0px -2px 10px var(--dark-navy));
+            clip-path: inset(0 0 0 0 round 0% 0% 20% 20%);
             width: 100%;
             max-width: 100%;
             height: auto;
-            clip-path: inset(0 0 0 0 round 0% 0% 20% 20%);
+            @media (max-width: 768px) {
+            }
         }
     }
 `;

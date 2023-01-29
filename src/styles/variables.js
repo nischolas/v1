@@ -17,6 +17,7 @@ const variables = css`
         --pink: #f57dff;
         --blue: #47c2ff;
         --red: #dd0033;
+        --red2: #c40467;
 
         --fz-xxs: 12px;
         --fz-xs: 13px;

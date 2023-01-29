@@ -8,6 +8,10 @@ const StyledH2 = styled.h2`
     gap: 1rem;
     font-size: 3rem;
 
+    background: linear-gradient(90deg, var(--red), var(--red2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     text-align: ${(props) => (props.center ? "center" : "left")};
 
     ${(props) =>
@@ -15,6 +19,7 @@ const StyledH2 = styled.h2`
         css`
             margin-bottom: 3rem;
             &::before {
+                display: inline-block;
                 content: "";
                 background-color: var(--red);
                 position: relative;
