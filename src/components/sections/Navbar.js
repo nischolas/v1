@@ -47,10 +47,18 @@ const StyledNav = styled.nav`
     width: 100%;
     font-size: 1.1rem;
     font-weight: 800;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+
     .links ul {
         display: flex;
         justify-content: space-between;
         gap: 0.3rem;
+        @media (max-width: 768px) {
+            gap: 0rem;
+        }
         list-style-type: none;
         li:last-child a {
             padding-right: 0;
