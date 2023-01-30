@@ -23,6 +23,10 @@ const Trailer = styled.div`
     cursor: none;
     color: white;
     text-shadow: 1px 1px 1px 1px red;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const Cursor = () => {

@@ -4,7 +4,7 @@ import { Container } from "@components/Layout";
 import { Logo } from "@components/Logo";
 import { FaPaperPlane } from "react-icons/fa";
 import styled from "styled-components";
-import { glassStyle } from "../../styles/variables";
+import { glassStyle, textOnBg } from "../../styles/variables";
 
 const StyledContact = styled.div`
     margin-top: 20rem;
@@ -12,6 +12,9 @@ const StyledContact = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    h3 {
+        ${textOnBg}
+    }
 `;
 
 const StyledFooter = styled.footer`
@@ -68,10 +71,11 @@ const StyledFooter = styled.footer`
 
 const Credits = styled.p`
     text-align: center;
-    color: var(--red);
+    color: var(--slate);
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-weight: 700;
+    ${textOnBg}
 `;
 
 export const Footer = () => {

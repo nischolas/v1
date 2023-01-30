@@ -13,6 +13,9 @@ const ProjectsWrapper = styled.ul`
     display: flex;
     flex-direction: column;
     gap: 10rem;
+    @media (max-width: 768px) {
+        gap: 3rem;
+    }
     margin-bottom: 4rem;
 `;
 

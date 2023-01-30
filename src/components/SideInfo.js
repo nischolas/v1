@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import useScrollDirection from "src/hooks/useScrollDir";
 import { useEffect, useState } from "react";
+import { fade } from "src/styles/variables";
 
 const StyledSideInfo = styled.aside`
     position: fixed;
@@ -11,6 +12,9 @@ const StyledSideInfo = styled.aside`
     gap: 1rem;
     bottom: 0;
     transition: var(--transition);
+
+    ${fade(10)}
+
     @media (max-width: 768px) {
         display: none;
     }

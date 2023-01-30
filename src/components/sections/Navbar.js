@@ -3,6 +3,7 @@ import useScrollDirection from "src/hooks/useScrollDir";
 import { useEffect, useState } from "react";
 import { Logo } from "@components/Logo";
 import Link from "next/link";
+import { fade } from "src/styles/variables";
 
 const StyledHeader = styled.header`
     position: fixed;
@@ -58,6 +59,18 @@ const StyledNav = styled.nav`
         gap: 0.3rem;
         @media (max-width: 768px) {
             gap: 0rem;
+        }
+
+        li {
+            &:nth-child(1) {
+                ${fade(2)}
+            }
+            &:nth-child(2) {
+                ${fade(3)}
+            }
+            &:nth-child(3) {
+                ${fade(4)}
+            }
         }
         list-style-type: none;
         li:last-child a {

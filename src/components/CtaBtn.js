@@ -1,3 +1,4 @@
+import { fade } from "src/styles/variables";
 import styled from "styled-components";
 
 const StyledCtaBtn = styled.a`
@@ -16,31 +17,19 @@ const StyledCtaBtn = styled.a`
     color: var(--red);
     transition: var(--transition);
     font-weight: bold;
-    --border-width: 2px;
     background-color: var(--light-navy);
+
+    ${fade(9)}
+
+    box-shadow: 0px 0px 0px 2px var(--red);
 
     svg {
         transition: var(--transition);
     }
-
-    &::before {
-        content: "";
-        transition: var(--transition);
-        position: absolute;
-        background-color: var(--red);
-        z-index: -1;
-        border-radius: var(--border-radius);
-        height: calc(100% + (2 * var(--border-width)));
-        width: calc(100% + (2 * var(--border-width)));
-        top: calc(-1 * var(--border-width));
-        bottom: calc(-1 * var(--border-width));
-        left: calc(-1 * var(--border-width));
-        right: calc(-1 * var(--border-width));
-    }
     &:hover {
         gap: 1rem;
         background-color: var(--navy);
-        --border-width: 4px;
+        box-shadow: 0px 0px 0px 4px var(--red);
 
         svg {
             transform: scale(1.2);

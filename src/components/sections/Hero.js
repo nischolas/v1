@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FaPaperPlane } from "react-icons/fa";
 import { CtaBtn } from "@components/CtaBtn";
+import { textOnBg, fade } from "src/styles/variables";
 
 const HeroSection = styled.section`
     min-height: 100vh;
@@ -13,26 +14,30 @@ const HeroSection = styled.section`
     h2,
     h3,
     p {
-        text-shadow: 0px 0px 5px var(--navy), 0px 0px 5px var(--navy), 0px 0px 5px var(--navy);
+        ${textOnBg};
     }
     h2 {
         font-size: clamp(var(--fz-md), 2vw, var(--fz-xxl));
         color: var(--red);
+        ${fade(5)};
     }
     h1 {
         font-size: clamp(50px, 9vw, 90px);
         color: var(--white);
         font-weight: 800;
+        ${fade(6)};
     }
 
     h3 {
         margin-top: -0.5rem;
         font-weight: 800;
         font-size: clamp(var(--fz-xxl), 3vw, var(--fz-heading));
+        ${fade(7)};
     }
     p {
         font-weight: 700;
         margin-top: 1rem;
+        ${fade(8)};
     }
 `;
 

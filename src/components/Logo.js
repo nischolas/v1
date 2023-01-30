@@ -1,8 +1,10 @@
 import React from "react";
+import { fade } from "src/styles/variables";
 
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
+    ${fade(1)}
     display: flex;
     align-items: center;
     gap: 0.5rem;

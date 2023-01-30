@@ -23,14 +23,16 @@ const AboutWrapper = styled.div`
     .about-text {
         ${glassStyle};
         font-weight: 700;
+        @media (max-width: 768px) {
+            font-size: 1rem;
+        }
 
-        padding: 25px;
+        padding: 1.6rem;
         padding-right: 20%;
         line-height: 1.6;
         grid-area: 2 / 1 / 3 / 4;
         @media (max-width: 768px) {
-            padding-right: 0;
-            /* padding-top: 10%; */
+            padding-right: 1.6rem;
             z-index: 2;
             grid-area: 2 / 1 / 4 / 5;
         }

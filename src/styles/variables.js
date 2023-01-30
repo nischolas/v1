@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css, keyframes } from "styled-components";
 
 const variables = css`
     :root {
@@ -61,5 +61,28 @@ export const glassStyle = css`
 
     color: var(--white);
 `;
+
+export const textOnBg = css`
+    text-shadow: 0px 0px 5px var(--navy), 0px 0px 5px var(--navy), 0px 0px 5px var(--navy), 5px 5px 10px var(--navy), 5px -5px 10px var(--navy), -5px -5px 10px var(--navy), -5px 5px 10px var(--navy);
+`;
+
+const fadeIn = keyframes`
+    from { transform: translateY(2rem); opacity:0; }
+    to { transform: translateY(0); opacity:1; }
+`;
+
+export const fade = (pos = 1) => {
+    const timeDifference = 0.25;
+    const firstDelay = 1;
+    return css`
+        opacity: 0;
+        transform: translateY(0);
+        animation-name: ${fadeIn};
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        animation-delay: ${firstDelay + timeDifference * pos}s;
+    `;
+};
 
 export default variables;

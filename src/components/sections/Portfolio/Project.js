@@ -19,6 +19,7 @@ const ProjectListItem = styled.li`
         aspect-ratio: 16/10;
 
         @media (max-width: 768px) {
+            aspect-ratio: 1/1;
             grid-column: 1 / -1;
         }
 
@@ -40,6 +41,7 @@ const ProjectListItem = styled.li`
 
             @media (max-width: 768px) {
                 filter: grayscale(100%) contrast(0.3) brightness(40%);
+                object-fit: cover;
             }
 
             &:hover {
@@ -110,6 +112,11 @@ const ProjectListItem = styled.li`
         z-index: 2;
         padding: 25px;
         font-size: 1.2rem;
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            border: none;
+            background: none;
+        }
         font-weight: 700;
         margin-bottom: 1rem;
 
@@ -135,6 +142,7 @@ const ProjectListItem = styled.li`
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        gap: 1rem;
         z-index: 2;
         margin-bottom: 1rem;
         padding: 0px;
@@ -145,7 +153,6 @@ const ProjectListItem = styled.li`
         }
 
         li {
-            margin: 0px 20px 5px 0px;
             color: white;
             font-size: 0.8rem;
             font-weight: 800;
@@ -163,14 +170,6 @@ const ProjectListItem = styled.li`
 
         @media (max-width: 768px) {
             justify-content: flex-start;
-        }
-
-        li {
-            margin: 0px 0px 5px 20px;
-
-            @media (max-width: 768px) {
-                margin: 0px 20px 5px 0px;
-            }
         }
     }
 
