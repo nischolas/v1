@@ -49,18 +49,9 @@ export const GlobalStyle = createGlobalStyle`${css`
         font-family: "Nunito";
         font-size: var(--fz-xl);
         line-height: 1.3;
-
-        cursor: none;
-        @media (max-width: 768px) {
-            cursor: default;
-        }
     }
 
     a {
-        cursor: none;
-        @media (max-width: 768px) {
-            cursor: default;
-        }
         color: inherit;
         text-decoration: none;
     }

@@ -72,11 +72,11 @@ const fadeIn = keyframes`
 `;
 
 export const fade = (pos = 1) => {
-    const timeDifference = 0.25;
+    const timeDifference = 0.1;
     const firstDelay = 1;
     return css`
         opacity: 0;
-        transform: translateY(0);
+        transform: translateY(2rem);
         animation-name: ${fadeIn};
         animation-fill-mode: forwards;
         animation-duration: 1s;

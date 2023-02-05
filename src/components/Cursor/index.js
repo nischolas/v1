@@ -7,7 +7,9 @@ const Trailer = styled.div`
     height: 25px;
     width: 25px;
     background-color: ${(props) => (props.interacting ? "transparent" : "white")};
+    /* background-color: transparent; */
     border-radius: 25px;
+    /* border: 5px solid white; */
 
     position: fixed;
     left: 0px;
@@ -42,11 +44,11 @@ export const Cursor = () => {
             y = e.clientY - trailer.offsetHeight / 2;
 
         const keyframes = {
-            transform: `translate(${x}px, ${y}px) scale(${interacting ? 1.5 : 1})`,
+            transform: `translate(${x + (interacting ? 30 : 0)}px, ${y - (interacting ? 30 : 0)}px) scale(${interacting ? 1.5 : 1})`,
         };
 
         trailer.animate(keyframes, {
-            duration: 50,
+            duration: 500,
             fill: "forwards",
         });
     };
@@ -76,7 +78,7 @@ export const Cursor = () => {
 
     return (
         <Trailer interacting={interacting} ref={TrailerRef}>
-            {icon === "text" ? <TbCursorText /> : icon === "link" ? <HiLink /> : null}
+            {/* {icon === "text" ? <TbCursorText /> : icon === "link" ? <HiLink /> : null} */}
         </Trailer>
     );
 };

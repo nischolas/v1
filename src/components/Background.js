@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useRef, useState } from "react";
+import { fade } from "src/styles/variables";
 
 const BgContainer = styled.div`
     position: fixed;
@@ -8,8 +9,10 @@ const BgContainer = styled.div`
     align-items: flex-end;
     width: 300vw;
     height: 100vh;
-    transform: translateX(-100vw);
-    z-index: -99999;
+    top: 0;
+    left: -100vw;
+    z-index: -999999;
+    ${fade(15)}
 `;
 const BgMoving = styled.div`
     position: relative;
