@@ -7,6 +7,7 @@ import { SideInfo } from "./SideInfo";
 import { Background } from "./Background";
 import { FaInstagram, FaGithub, FaCodepen } from "react-icons/fa";
 import { Cursor } from "./Cursor";
+import { Loading } from "./Loading";
 
 export const Layout = ({ children, title }) => {
     return (
@@ -23,6 +24,7 @@ export const Layout = ({ children, title }) => {
             </Head>
 
             <GlobalStyle />
+            <Loading />
             <Background />
             <Cursor />
 

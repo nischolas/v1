@@ -71,9 +71,10 @@ const fadeIn = keyframes`
     to { transform: translateY(0); opacity:1; }
 `;
 
+export const loadingDelay = 2000;
+
 export const fade = (pos = 1) => {
-    const timeDifference = 0.1;
-    const firstDelay = 1;
+    const timeDifference = 150;
     return css`
         opacity: 0;
         transform: translateY(2rem);
@@ -81,7 +82,7 @@ export const fade = (pos = 1) => {
         animation-fill-mode: forwards;
         animation-duration: 1s;
         animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-        animation-delay: ${firstDelay + timeDifference * pos}s;
+        animation-delay: ${loadingDelay + timeDifference * pos}ms;
     `;
 };
 
