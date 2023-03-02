@@ -213,7 +213,7 @@ export const Project = ({ project }) => {
                     </ul>
                     <div className="project-links">
                         <FaLink />{" "}
-                        <a target="_blank" without rel="noreferrer" href={project.link}>
+                        <a target="_blank" rel="noreferrer" href={project.link}>
                             {project.link.replace("https://www.", "")}
                         </a>
                     </div>
