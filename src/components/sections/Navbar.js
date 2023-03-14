@@ -71,6 +71,16 @@ const StyledNav = styled.nav`
             &:nth-child(3) {
                 ${fade(4)}
             }
+            a {
+                padding: 0.5rem 1rem;
+                white-space: nowrap;
+
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--red);
+                }
+            }
         }
         list-style-type: none;
         li:last-child a {
@@ -87,17 +97,7 @@ const StyledNav = styled.nav`
     }
 `;
 
-const StyledNavLink = styled.a`
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    white-space: nowrap;
-
-    transition: var(--transition);
-
-    &:hover {
-        color: var(--red);
-    }
-`;
+const StyledNavLink = styled(Link)``;
 
 export const Navbar = () => {
     const scrollDirection = useScrollDirection("down");
@@ -117,19 +117,23 @@ export const Navbar = () => {
     return (
         <StyledHeader scrollDirection={scrollDirection} scrolledToTop={scrolledToTop}>
             <StyledNav>
-                <Link href="/" className="logoddd">
-                    <Logo />
-                </Link>
+                <Logo />
                 <div className="links">
                     <ul>
                         <li>
-                            <StyledNavLink href="#ueber-mich">Über mich</StyledNavLink>
+                            <StyledNavLink href="/#ueber-mich">
+                                <a>Über mich</a>
+                            </StyledNavLink>
                         </li>
                         <li>
-                            <StyledNavLink href="#portfolio">Portfolio</StyledNavLink>
+                            <StyledNavLink href="/#portfolio">
+                                <a>Portfolio</a>
+                            </StyledNavLink>
                         </li>
                         <li>
-                            <StyledNavLink href="#kontakt">Kontakt</StyledNavLink>
+                            <StyledNavLink href="/#kontakt">
+                                <a>Kontakt</a>
+                            </StyledNavLink>
                         </li>
                     </ul>
                 </div>
