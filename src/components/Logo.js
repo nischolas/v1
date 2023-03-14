@@ -1,6 +1,5 @@
-import React from "react";
+import Link from "next/link";
 import { fade } from "src/styles/variables";
-
 import styled from "styled-components";
 
 const LogoContainer = styled.div`
@@ -8,6 +7,7 @@ const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
     p {
         display: none;
         font-weight: 700;
@@ -84,33 +84,35 @@ const StyledLogo = styled.svg`
 
 export const Logo = ({ notext, color }) => {
     return (
-        <LogoContainer notext={notext}>
-            <StyledLogo color={color} width="100" height="100" id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <path
-                    id="L"
-                    className="logo-path logo-path-1 "
-                    d="M6,50a3.68,3.68,0,0,1,1.15-2.7l15.6-14.93a4.54,4.54,0,0,1,6.06-.09,3.83,3.83,0,0,1,1.26,2.94h0V64.78h0a3.83,3.83,0,0,1-1.26,2.94,4.54,4.54,0,0,1-6.06-.09L7.15,52.7A3.64,3.64,0,0,1,6,50Z"
-                />
-                <path
-                    id="M"
-                    className="logo-path logo-path-2 "
-                    d="M60.63,65.63V23.13a12.09,12.09,0,0,0-3.15-9.08c-4.22-4.53-10.4-3.53-15.67,0s-8.88,6.18-8.88,8.59c0,4.61,6,3.66,6,11.71v42.5A12.13,12.13,0,0,0,42.13,86c4.23,4.53,10.41,3.53,15.67,0s8.88-6.18,8.88-8.59C66.68,72.73,60.63,73.68,60.63,65.63Z"
-                />
-                <path
-                    id="R"
-                    className="logo-path logo-path-3 "
-                    d="M92.85,52.7,77.25,67.63a4.54,4.54,0,0,1-6.06.09,3.83,3.83,0,0,1-1.26-2.94h0V35.22h0a3.83,3.83,0,0,1,1.26-2.94,4.54,4.54,0,0,1,6.06.09L92.85,47.3A3.68,3.68,0,0,1,94,50,3.64,3.64,0,0,1,92.85,52.7Z"
-                />
-            </StyledLogo>
-            {notext ? (
-                <p>
-                    Nicholas
-                    <br />
-                    Schneider
-                </p>
-            ) : (
-                <p>Nicholas Schneider</p>
-            )}
-        </LogoContainer>
+        <Link href="/">
+            <LogoContainer>
+                <StyledLogo color={color} width="100" height="100" id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <path
+                        id="L"
+                        className="logo-path logo-path-1 "
+                        d="M6,50a3.68,3.68,0,0,1,1.15-2.7l15.6-14.93a4.54,4.54,0,0,1,6.06-.09,3.83,3.83,0,0,1,1.26,2.94h0V64.78h0a3.83,3.83,0,0,1-1.26,2.94,4.54,4.54,0,0,1-6.06-.09L7.15,52.7A3.64,3.64,0,0,1,6,50Z"
+                    />
+                    <path
+                        id="M"
+                        className="logo-path logo-path-2 "
+                        d="M60.63,65.63V23.13a12.09,12.09,0,0,0-3.15-9.08c-4.22-4.53-10.4-3.53-15.67,0s-8.88,6.18-8.88,8.59c0,4.61,6,3.66,6,11.71v42.5A12.13,12.13,0,0,0,42.13,86c4.23,4.53,10.41,3.53,15.67,0s8.88-6.18,8.88-8.59C66.68,72.73,60.63,73.68,60.63,65.63Z"
+                    />
+                    <path
+                        id="R"
+                        className="logo-path logo-path-3 "
+                        d="M92.85,52.7,77.25,67.63a4.54,4.54,0,0,1-6.06.09,3.83,3.83,0,0,1-1.26-2.94h0V35.22h0a3.83,3.83,0,0,1,1.26-2.94,4.54,4.54,0,0,1,6.06.09L92.85,47.3A3.68,3.68,0,0,1,94,50,3.64,3.64,0,0,1,92.85,52.7Z"
+                    />
+                </StyledLogo>
+                {notext ? (
+                    <p>
+                        Nicholas
+                        <br />
+                        Schneider
+                    </p>
+                ) : (
+                    <p>Nicholas Schneider</p>
+                )}
+            </LogoContainer>
+        </Link>
     );
 };
