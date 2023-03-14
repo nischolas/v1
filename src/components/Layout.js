@@ -13,17 +13,9 @@ export const Layout = ({ children, title }) => {
     return (
         <>
             <Head>
-                <link rel="icon" href="/favicon.ico" />
                 <meta name="description" content="Webentwickler aus Saarbrücken" />
                 <meta charSet="UTF-8" />
-                <meta name="keywords" content="Webentwicklung, Webentwickler, Etnwicklwe, Programmierer, Webdev, Web Developer, Developer, Freelancer, Freelancing, Saarbrücken, Web 2.0" />
-                <meta name="author" content="Nicholas Schneider" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>{`${title ? title + " | " : ""}Nicholas Schneider`}</title>
-                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-                <link rel="manifest" href="/site.webmanifest" />
             </Head>
 
             <GlobalStyle />

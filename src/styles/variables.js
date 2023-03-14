@@ -71,7 +71,7 @@ const fadeIn = keyframes`
     to { transform: translateY(0); opacity:1; }
 `;
 
-export const loadingDelay = 2000;
+export const loadingDelay = 0;
 
 export const fade = (pos = 1) => {
     const timeDifference = 150;
