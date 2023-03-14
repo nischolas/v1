@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { fade } from "src/styles/variables";
 
 const BgContainer = styled.div`
@@ -36,31 +36,35 @@ const BgMoving = styled.div`
 `;
 
 export const Background = () => {
-    const BgMovingref = useRef(null);
-
     const getMinToMaxPercent = (percent, min, max) => {
         let range = max - min;
         let x = (range / 100) * percent;
         return min + x;
     };
 
-    const scrolling = () => {
-        let html = document.documentElement;
-        let body = document.body;
-        let pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-        let scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-        let viewportHeight = window.innerHeight;
-
-        let range = pageHeight - viewportHeight;
-        let percentScrolled = (scrollTop / range) * 100;
-
-        const rotation = getMinToMaxPercent(percentScrolled, 0, 70);
-        const translation = getMinToMaxPercent(percentScrolled, 0, 30);
-
-        BgMovingref.current.style.transform = `rotateX(${rotation}deg) translateY(${translation}vh)`;
-    };
+    const ref = useRef(null);
 
     useEffect(() => {
+        const html = document.documentElement;
+        const body = document.body;
+        const el = ref.current;
+
+        const scrolling = () => {
+            if (el) {
+                let pageHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+                let scrollTop = window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+                let viewportHeight = window.innerHeight;
+
+                let range = pageHeight - viewportHeight;
+                let percentScrolled = (scrollTop / range) * 100;
+
+                const rotation = getMinToMaxPercent(percentScrolled, 0, 70);
+                const translation = getMinToMaxPercent(percentScrolled, 0, 30);
+
+                el.style.transform = `rotateX(${rotation}deg) translateY(${translation}vh)`;
+            }
+        };
+
         window.addEventListener("scroll", scrolling);
         return () => {
             window.removeEventListener("scroll", scrolling);
@@ -69,7 +73,7 @@ export const Background = () => {
 
     return (
         <BgContainer>
-            <BgMoving ref={BgMovingref} />
+            <BgMoving ref={ref} />
         </BgContainer>
     );
 };
