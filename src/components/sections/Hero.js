@@ -5,7 +5,7 @@ import { textOnBg, fade } from "src/styles/variables";
 
 const HeroSection = styled.section`
     min-height: 100vh;
-    max-width: 55ch;
+    /* max-width: 55ch; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -29,6 +29,7 @@ const HeroSection = styled.section`
     }
 
     h3 {
+        color: var(--red);
         margin-top: -0.5rem;
         font-weight: 800;
         font-size: clamp(var(--fz-xxl), 3vw, var(--fz-heading));
@@ -44,9 +45,9 @@ const HeroSection = styled.section`
 export const Hero = () => {
     return (
         <HeroSection id="start">
-            <h2>Hallo, ich bin</h2>
-            <h1>Nicholas</h1>
-            <h3>Ich baue Webseiten.</h3>
+            <h3>Hallo, ich bin Nicholas</h3>
+            {/* <h1>Nicholas</h1> */}
+            <h1>Ich baue Webseiten.</h1>
             <p>Ich bin Frontend (und manchmal auch Backend) Entwickler aus Saarbrücken, spezialisiert auf&apos;s Bauen und Entwerfen von Webseiten, Applikationen und allem, was dazwischen liegt.</p>
             <CtaBtn href={"mailto:hallo@nicholas-schneider.de"}>
                 Sag hallo!
