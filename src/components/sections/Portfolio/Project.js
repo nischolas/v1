@@ -17,6 +17,8 @@ const ProjectListItem = styled.li`
         border-radius: var(--border-radius-lg);
         overflow: hidden;
         aspect-ratio: 16/10;
+        background-image: url(${(props) => props.image});
+        background-size: cover;
 
         @media (max-width: 768px) {
             aspect-ratio: 1/1;
@@ -194,7 +196,7 @@ const ProjectListItem = styled.li`
 
 export const Project = ({ project }) => {
     return (
-        <ProjectListItem className="project">
+        <ProjectListItem image={project.img} className="project">
             <div className="project-content">
                 <div>
                     <p className="project-overline">{project.type}</p>
@@ -221,7 +223,7 @@ export const Project = ({ project }) => {
             </div>
             <div className="project-image">
                 <a href={project.link} rel="noreferrer" target="_blank">
-                    <img src={project.img} alt={project.name} />
+                    {/* <img src={project.img} alt={project.name} /> */}
                 </a>
             </div>
         </ProjectListItem>

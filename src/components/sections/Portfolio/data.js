@@ -16,11 +16,11 @@ export const data = [
         img: "/img/heiraten-mit-bernd.png",
     },
     {
-        name: "AT Performance",
+        name: "Persönliches Portfolio",
         type: "Website",
-        desc: "Moderne Webseite basierend auf Next.js mit minimalem Backend, Lokalisierung, Verfügbarkeitsanzeige und Reservierungen.",
-        tech: ["Next.js", "CSS Modules", "SCSS", "Typescript"],
-        link: "https://www.at-performance.de",
-        img: "/img/at-performance.png",
+        desc: "Mein eigenes Portfolio, SEO optimiert, Accessibility in mind, Quellcode offen",
+        tech: ["Next.js", "Styled Components"],
+        link: "https://www.github.com/nchlsschndr/v1",
+        img: "/img/nicholas-schneider.png",
     },
 ];
