@@ -77,13 +77,13 @@ const WordCycler = ({ words }) => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setCurrentWordIndex((prevIndex) => (prevIndex === words.length - 1 ? 0 : prevIndex + 1));
             setCurrentWord(words[currentWordIndex]);
+            setCurrentWordIndex((prevIndex) => (prevIndex === words.length - 1 ? 0 : prevIndex + 1));
         }, 3000);
 
         return () => clearInterval(intervalId);
     }, [currentWordIndex]);
-
+    // key because change -> rerender -> animation restart
     return <StyledWord key={currentWordIndex}>{currentWord}.</StyledWord>;
 };
 
