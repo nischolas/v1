@@ -9,6 +9,14 @@ const ProjectListItem = styled.li`
     -webkit-box-align: center;
     align-items: center;
 
+    @media (max-width: 768px) {
+        &:hover {
+            .project-image {
+                filter: none;
+            }
+        }
+    }
+
     .project-image {
         box-shadow: 0 10px 30px -15px black;
         grid-area: 1 / 6 / -1 / -1;
@@ -19,35 +27,38 @@ const ProjectListItem = styled.li`
         aspect-ratio: 16/10;
         background-image: url(${(props) => props.image});
         background-size: cover;
+        filter: grayscale(20%) contrast(1) brightness(100%) hue-rotate(0deg) sepia(0%);
+        transition: var(--transition);
+
+        &::after {
+            transition: var(--transition);
+            z-index: -99;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: var(--navy);
+            mix-blend-mode: multiply;
+            opacity: 0.4;
+        }
 
         @media (max-width: 768px) {
+            filter: grayscale(50%) contrast(1) brightness(10%) hue-rotate(0deg) sepia(0%);
             aspect-ratio: 1/1;
             grid-column: 1 / -1;
+            &:hover {
+                filter: grayscale(50%) contrast(1) brightness(10%) hue-rotate(0deg) sepia(0%);
+            }
         }
 
-        a {
-            display: block;
-            background-color: var(--slate);
-            transition: background-color var(--easing);
-
-            &:hover {
+        &:hover {
+            filter: none;
+            &::after {
                 background-color: transparent;
-            }
-        }
-
-        img {
-            max-width: 100%;
-            mix-blend-mode: multiply;
-            filter: grayscale(0%) contrast(100%) brightness(100%);
-            transition: filter var(--easing);
-
-            @media (max-width: 768px) {
-                filter: grayscale(100%) contrast(0.3) brightness(40%);
-                object-fit: cover;
-            }
-
-            &:hover {
-                filter: none;
+                background-color: var(--navy);
+                mix-blend-mode: multiply;
+                @media (max-width: 768px) {
+                }
             }
         }
     }
@@ -221,11 +232,9 @@ export const Project = ({ project }) => {
                     </div>
                 </div>
             </div>
-            <div className="project-image">
-                <a href={project.link} rel="noreferrer" target="_blank">
-                    {/* <img src={project.img} alt={project.name} /> */}
-                </a>
-            </div>
+            <a href={project.link} rel="noreferrer" target="_blank" className="project-image">
+                {/* <img src={project.img} alt={project.name} /> */}
+            </a>
         </ProjectListItem>
     );
 };
