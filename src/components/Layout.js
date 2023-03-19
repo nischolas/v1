@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { GlobalStyle } from "src/styles/GlobalStyle";
 import { SideInfo } from "./SideInfo";
 import { Background } from "./Background";
-import { FaInstagram, FaGithub, FaCodepen } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaCodepen, FaSpotify } from "react-icons/fa";
 import { Cursor } from "./Cursor";
 import { Loading } from "./Loading";
 
@@ -28,14 +28,17 @@ export const Layout = ({ children, title }) => {
                 <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
             </SideInfo>
             <SideInfo pos={"left"}>
-                <a href="">
+                <a href="https://github.com/nchlsschndr">
                     <FaGithub />
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/nchlsschndr/">
                     <FaInstagram />
                 </a>
-                <a href="">
+                <a href="https://codepen.io/nchlsschndr">
                     <FaCodepen />
+                </a>
+                <a href="https://open.spotify.com/user/1135788776">
+                    <FaSpotify />
                 </a>
             </SideInfo>
 

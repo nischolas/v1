@@ -116,7 +116,7 @@ export const Footer = () => {
                     <ul>
                         <li>Finde mich bei</li>
                         <li>
-                            <a href="https://github.com" target="_blank" rel="noreferrer">
+                            <a href="https://github.com/nchlsschndr" target="_blank" rel="noreferrer">
                                 Github
                             </a>
                         </li>
@@ -126,12 +126,12 @@ export const Footer = () => {
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                            <a href="https://www.instagram.com/nchlsschndr/" target="_blank" rel="noreferrer">
                                 Instagram
                             </a>
                         </li>
                         <li>
-                            <a href="https://spotify.com" target="_blank" rel="noreferrer">
+                            <a href="https://open.spotify.com/user/1135788776" target="_blank" rel="noreferrer">
                                 Spotify
                             </a>
                         </li>
