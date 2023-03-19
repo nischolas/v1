@@ -34,6 +34,9 @@ const StyledFooter = styled.footer`
             flex-wrap: wrap;
         }
         > * {
+            @media (max-width: 768px) {
+                width: 100%;
+            }
             width: 25%;
         }
         svg {
@@ -53,17 +56,17 @@ const StyledFooter = styled.footer`
                 a {
                     color: inherit;
                     font-weight: 600;
-                }
-                a:hover {
-                    text-decoration: underline;
-                    color: white;
+                    &:hover {
+                        text-decoration: underline;
+                        color: white;
+                    }
                 }
             }
             li:first-child {
-                margin-bottom: 1rem;
-            }
-            li:not(:first-child) {
-                font-weight: 400;
+                @media (max-width: 768px) {
+                    margin-bottom: 0.5rem;
+                }
+                margin-bottom: 0.9rem;
             }
         }
     }
