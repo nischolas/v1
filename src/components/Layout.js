@@ -21,7 +21,7 @@ export const Layout = ({ children, title }) => {
             <GlobalStyle />
             <Loading />
             <Background />
-            {/* <Cursor /> */}
+            <Cursor />
 
             <Navbar />
             <SideInfo pos={"right"}>
