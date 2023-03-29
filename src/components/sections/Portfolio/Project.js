@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { FaLink } from "react-icons/fa";
 import { glassStyle } from "../../../styles/variables";
+import ScrollReveal from "@components/ScrollReveal";
 
-const ProjectListItem = styled.li`
+const ProjectListItem = styled("li")`
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(12, 1fr);
@@ -19,7 +20,7 @@ const ProjectListItem = styled.li`
 
     .project-image {
         box-shadow: 0 10px 30px -15px black;
-        grid-area: 1 / 6 / -1 / -1;
+        grid-area: 1 / 5 / -1 / -1;
         position: relative;
         z-index: 1;
         border-radius: var(--border-radius-lg);
@@ -27,7 +28,7 @@ const ProjectListItem = styled.li`
         aspect-ratio: 16/10;
         background-image: url(${(props) => props.image});
         background-size: cover;
-        filter: grayscale(60%) contrast(1) brightness(100%) hue-rotate(0deg) sepia(0%);
+        filter: grayscale(60%) contrast(1) brightness(60%) hue-rotate(0deg) sepia(0%) blur(0px);
         transition: var(--transition);
         @media (max-width: 768px) {
             filter: grayscale(60%) contrast(1) brightness(10%) hue-rotate(0deg) sepia(0%);
@@ -65,7 +66,7 @@ const ProjectListItem = styled.li`
     }
 
     &:nth-of-type(2n + 1) .project-image {
-        grid-column: 1 / 8;
+        grid-column: 1 / 9;
 
         @media (max-width: 768px) {
             grid-column: 1 / -1;

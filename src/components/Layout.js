@@ -8,6 +8,7 @@ import { Background } from "./Background";
 import { FaInstagram, FaGithub, FaCodepen, FaSpotify } from "react-icons/fa";
 import { Cursor } from "./Cursor";
 import { Loading } from "./Loading";
+import ScrollReveal from "./ScrollReveal";
 
 export const Layout = ({ children, title }) => {
     return (
@@ -45,6 +46,7 @@ export const Layout = ({ children, title }) => {
             <Container>{children}</Container>
 
             <Footer />
+            <ScrollReveal />
         </>
     );
 };
