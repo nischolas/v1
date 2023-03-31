@@ -25,6 +25,7 @@ const StyledLogo = styled.svg`
     animation-fill-mode: forwards;
     animation-duration: 1s;
     animation-delay: 500ms;
+    opacity: 0;
 
     .logo-path-1 {
         animation-name: logopath1;
@@ -40,22 +41,15 @@ const StyledLogo = styled.svg`
 
     @keyframes logoturn {
         0% {
-            transform: rotate(0deg);
-        }
-        /* 20% {
-            transform: rotate(-45deg);
+            opacity: 0;
         }
         40% {
-            transform: rotate(-45deg);
+            opacity: 1;
+            transform: rotate(0deg);
         }
-        60% {
-            transform: rotate(45deg);
-        }
-        80% {
-            transform: rotate(45deg);
-        } */
         100% {
-            transform: rotate(360deg);
+            opacity: 1;
+            transform: rotate(360deg) scale(2);
         }
     }
 
