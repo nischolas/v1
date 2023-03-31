@@ -56,6 +56,31 @@ export const Container = styled.main`
 
 export const LowLevelSiteContainer = styled.div`
     padding-top: 200px;
+    line-height: 1.4;
+    h1 {
+        margin: 1rem 0 2rem;
+    }
+    h2 {
+        margin: 0.5rem 0 1rem;
+    }
+    h3 {
+        margin: 1rem 0 0.5rem;
+    }
+    p,
+    li {
+        margin-bottom: 0.5rem;
+    }
+    ul {
+        padding-inline-start: 1em;
+    }
+    a {
+        transition: all 200ms;
+        color: var(--lightest-slate);
+        &:hover {
+            color: var(--red);
+        }
+        font-weight: bold;
+    }
     * {
         text-align: justify;
     }

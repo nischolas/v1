@@ -18,13 +18,16 @@ export default function Home() {
 
                 <h2>Kontakt</h2>
                 <p>
-                    Telefon: 015229998493
-                    <br />
-                    E-Mail: hallo@nicholas-schneider.de
+                    E-Mail: <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
                 </p>
 
+                <br />
+
                 <p>
-                    Quelle: <a href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-generator.html</a>
+                    Quelle:{" "}
+                    <a target="_blank" rel="noreferrer" href="https://www.e-recht24.de/impressum-generator.html">
+                        www.e-recht24.de
+                    </a>
                 </p>
             </LowLevelSiteContainer>
         </Layout>
