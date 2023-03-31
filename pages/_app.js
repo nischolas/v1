@@ -15,7 +15,7 @@ import { Loading } from "@components/Loading";
 function MyApp({ Component, pageProps }) {
     const [loading, setLoading] = useState(true);
 
-    const loadingDuration = 1000;
+    const loadingDuration = 2700;
 
     useEffect(() => {
         setTimeout(() => {
