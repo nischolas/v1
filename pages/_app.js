@@ -6,16 +6,39 @@ import "@fontsource/nunito/600.css";
 import "@fontsource/nunito/700.css";
 import "@fontsource/nunito/800.css";
 import "@fontsource/nunito/900.css";
+import { GlobalStyle } from "src/styles/GlobalStyle";
+
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import { Loading } from "@components/Loading";
 
 function MyApp({ Component, pageProps }) {
+    const [loading, setLoading] = useState(true);
+
+    const loadingDuration = 1000;
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, loadingDuration);
+    }, []);
     return (
         <>
             <Head>
-                {/* Rest goes into _document.js: https://nextjs.org/docs/messages/no-document-viewport-meta */}
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content="Webentwickler aus Saarbrücken" />
+                <meta charSet="UTF-8" />
+                <title>Nicholas Schneider</title>
+                <meta name="keywords" content="Webentwicklung, Webentwickler, Etnwicklwe, Programmierer, Webdev, Web Developer, Developer, Freelancer, Freelancing, Saarbrücken, Web 2.0" />
+                <meta name="author" content="Nicholas Schneider" />
+                <link rel="icon" href="/favicon/favicon.ico" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+                <link rel="manifest" href="/favicon/site.webmanifest" />
             </Head>
-            <Component {...pageProps} />;
+            <GlobalStyle />
+            {loading ? <Loading loadingDuration={loadingDuration} /> : <Component {...pageProps} />}
         </>
     );
 }

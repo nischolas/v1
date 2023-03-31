@@ -2,25 +2,18 @@ import Head from "next/head";
 import { Footer } from "src/components/sections/Footer";
 import { Navbar } from "src/components/sections/Navbar";
 import styled from "styled-components";
-import { GlobalStyle } from "src/styles/GlobalStyle";
 import { SideInfo } from "./SideInfo";
 import { Background } from "./Background";
 import { FaInstagram, FaGithub, FaCodepen, FaSpotify } from "react-icons/fa";
 import { Cursor } from "./Cursor";
-import { Loading } from "./Loading";
 import ScrollReveal from "./ScrollReveal";
 
 export const Layout = ({ children, title }) => {
     return (
         <>
             <Head>
-                <meta name="description" content="Webentwickler aus Saarbrücken" />
-                <meta charSet="UTF-8" />
                 <title>{`${title ? title + " | " : ""}Nicholas Schneider`}</title>
             </Head>
-
-            <GlobalStyle />
-            <Loading />
             <Background />
             <Cursor />
 

@@ -26,31 +26,25 @@ const StyledLoadingWrapper = styled.div`
     position: fixed;
     width: 100vw;
     height: 100vh;
-    /* height: var(--nav-height); */
-    background-color: var(--navy);
-    /* display: flex; */
+    /* background-color: red; */
+    display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 99;
-    display: ${(props) => (props.finishedLoading ? "none" : "flex")};
-    &::before {
-        content: "";
-        width: 30%;
-        height: 100%;
-        animation: ${loading} ${loadingDelay}ms ease-in-out forwards;
+    div {
+        /* background-color: blue; */
+        width: 0;
+        height: 100vh;
+        animation: ${loading} ${(props) => props.loadingDuration}ms ease-in-out forwards;
         background: linear-gradient(90deg, var(--navy) 0%, var(--light-navy) 100%);
         background-position: center 0%;
+        z-index: 99999999;
     }
 `;
 
-export const Loading = () => {
-    const [finishedLoading, setFinishedLoading] = useState(false);
-    setTimeout(() => {
-        setFinishedLoading(true);
-    }, loadingDelay);
+export const Loading = ({ loadingDuration }) => {
     return (
-        <StyledLoadingWrapper finishedLoading={finishedLoading} className="loading">
-            {/* <p>Loading</p> */}
+        <StyledLoadingWrapper loadingDuration={loadingDuration}>
+            <div></div>
         </StyledLoadingWrapper>
     );
 };
