@@ -3,7 +3,7 @@ import { LowLevelSiteContainer } from "src/components/Layout";
 
 export default function Home() {
     return (
-        <Layout>
+        <Layout noBg>
             <LowLevelSiteContainer>
                 <h1>Impressum</h1>
 

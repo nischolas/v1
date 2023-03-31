@@ -8,13 +8,13 @@ import { FaInstagram, FaGithub, FaCodepen, FaSpotify } from "react-icons/fa";
 import { Cursor } from "./Cursor";
 import ScrollReveal from "./ScrollReveal";
 
-export const Layout = ({ children, title }) => {
+export const Layout = ({ children, title, noBg }) => {
     return (
         <>
             <Head>
                 <title>{`${title ? title + " | " : ""}Nicholas Schneider`}</title>
             </Head>
-            <Background />
+            {!noBg && <Background />}
             <Cursor />
 
             <Navbar />
@@ -22,16 +22,16 @@ export const Layout = ({ children, title }) => {
                 <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
             </SideInfo>
             <SideInfo pos={"left"}>
-                <a href="https://github.com/nchlsschndr">
+                <a target="_blank" rel="noreferrer" href="https://github.com/nchlsschndr">
                     <FaGithub />
                 </a>
-                <a href="https://www.instagram.com/nchlsschndr/">
+                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/nchlsschndr/">
                     <FaInstagram />
                 </a>
-                <a href="https://codepen.io/nchlsschndr">
+                <a target="_blank" rel="noreferrer" href="https://codepen.io/nchlsschndr">
                     <FaCodepen />
                 </a>
-                <a href="https://open.spotify.com/user/1135788776">
+                <a target="_blank" rel="noreferrer" href="https://open.spotify.com/user/1135788776">
                     <FaSpotify />
                 </a>
             </SideInfo>

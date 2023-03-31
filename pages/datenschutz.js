@@ -3,7 +3,7 @@ import { LowLevelSiteContainer } from "src/components/Layout";
 
 export default function Home() {
     return (
-        <Layout>
+        <Layout noBg>
             <LowLevelSiteContainer>
                 <h1>Datenschutz&shy;erkl&auml;rung</h1>
                 <h2>1. Datenschutz auf einen Blick</h2>
