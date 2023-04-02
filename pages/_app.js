@@ -6,18 +6,29 @@ import "@fontsource/nunito/600.css";
 import "@fontsource/nunito/700.css";
 import "@fontsource/nunito/800.css";
 import "@fontsource/nunito/900.css";
-import { GlobalStyle } from "src/styles/GlobalStyle";
 
 import Head from "next/head";
+import { useRouter } from "next/router";
+
 import { useEffect, useState } from "react";
+
 import { Loading } from "@components/Loading";
+
+import { GlobalStyle } from "src/styles/GlobalStyle";
 
 function MyApp({ Component, pageProps }) {
     const [loading, setLoading] = useState(true);
+    const [isOnHp, setIsOnHp] = useState(true);
+    const router = useRouter();
 
     const loadingDuration = 2700;
 
     useEffect(() => {
+        if (router.pathname !== "/") {
+            setLoading(false);
+            setIsOnHp(false);
+            return;
+        }
         setTimeout(() => {
             setLoading(false);
         }, loadingDuration);
@@ -38,7 +49,7 @@ function MyApp({ Component, pageProps }) {
                 <link rel="manifest" href="/favicon/site.webmanifest" />
             </Head>
             <GlobalStyle />
-            {loading ? <Loading loadingDuration={loadingDuration} /> : <Component {...pageProps} />}
+            {loading && isOnHp ? <Loading loadingDuration={loadingDuration} /> : <Component {...pageProps} />}
         </>
     );
 }
