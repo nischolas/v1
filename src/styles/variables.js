@@ -31,7 +31,7 @@ const variables = css`
         --padding-outer: 3rem;
         --padding-inner: clamp(8rem, 10vw, 10rem);
 
-        --padding-mobile: 2rem;
+        --padding-mobile: 1rem;
 
         --bp-mobile: 768px;
 

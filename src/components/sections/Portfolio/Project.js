@@ -7,16 +7,13 @@ const ProjectListItem = styled("li")`
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(12, 1fr);
-    -webkit-box-align: center;
     align-items: center;
 
-    /* @media (max-width: 768px) {
-        &:hover {
-            .project-image {
-                filter: none;
-            }
-        }
-    } */
+    @media (max-width: 768px) {
+        grid-template-rows: repeat(2, 100px);
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 30px -15px black;
+    }
 
     .project-image {
         box-shadow: 0 10px 30px -15px black;
@@ -24,14 +21,16 @@ const ProjectListItem = styled("li")`
         position: relative;
         z-index: 1;
         border-radius: var(--border-radius-lg);
-        overflow: hidden;
         aspect-ratio: 16/10;
         background-image: url(${(props) => props.image});
-        background-size: cover;
+        background-position: center;
+        background-size: 100%;
         filter: grayscale(60%) contrast(1) brightness(60%) hue-rotate(0deg) sepia(0%) blur(0px);
         transition: var(--transition);
         @media (max-width: 768px) {
-            filter: grayscale(60%) contrast(1) brightness(10%) hue-rotate(0deg) sepia(0%);
+            filter: none;
+            grid-row: 1 / 3;
+            grid-column: 1 / -1;
         }
 
         &::after {
@@ -44,24 +43,14 @@ const ProjectListItem = styled("li")`
             background-color: var(--navy);
             mix-blend-mode: multiply;
             opacity: 0.4;
-        }
-
-        @media (max-width: 768px) {
-            aspect-ratio: 1/1;
-            grid-column: 1 / -1;
+            @media (max-width: 768px) {
+                display: none;
+            }
         }
 
         &:hover {
-            @media (max-width: 768px) {
-                filter: grayscale(60%) contrast(1) brightness(10%) hue-rotate(0deg) sepia(0%);
-                &::after {
-                    background-color: var(--navy);
-                }
-            }
+            background-size: 101%;
             filter: none;
-            &::after {
-                background-color: transparent;
-            }
         }
     }
 
@@ -80,8 +69,13 @@ const ProjectListItem = styled("li")`
 
         @media (max-width: 768px) {
             grid-column: 1 / -1;
-            padding: 0px 1.5rem;
+            grid-row: 3/4;
+            padding: 1rem 1.5rem 1.5rem;
             text-align: left;
+            background-color: var(--dark-navy);
+            backdrop-filter: blur(5px);
+            border-bottom-left-radius: var(--border-radius-lg);
+            border-bottom-right-radius: var(--border-radius-lg);
         }
     }
 
@@ -91,9 +85,7 @@ const ProjectListItem = styled("li")`
 
         @media (max-width: 768px) {
             grid-column: 1 / -1;
-            padding: 0 1.5rem;
             text-align: left;
-            // background-color: rgba(16, 20, 25, 0.9);
         }
     }
 
