@@ -73,16 +73,17 @@ const StyledWord = styled.span`
 
 const WordCycler = ({ words }) => {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
-    const [currentWord, setCurrentWord] = useState(words[currentWordIndex]);
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setCurrentWord(words[currentWordIndex]);
             setCurrentWordIndex((prevIndex) => (prevIndex === words.length - 1 ? 0 : prevIndex + 1));
         }, 3000);
 
         return () => clearInterval(intervalId);
-    }, [currentWordIndex]);
+    }, [words]);
+
+    const currentWord = words[currentWordIndex];
+
     // key because change -> rerender -> animation restart
     return <StyledWord key={currentWordIndex}>{currentWord}.</StyledWord>;
 };
@@ -92,7 +93,7 @@ export const Hero = () => {
     return (
         <HeroSection id="start">
             <h3>Hallo, ich bin Nicholas</h3>
-            <h1>Ich baue {<WordCycler words={words} />}</h1>
+            <h1 title="Ich baue Webseiten.">Ich baue {<WordCycler words={words} />}</h1>
             <p>Ich bin Frontend (und manchmal auch Backend) Entwickler aus Saarbrücken, spezialisiert auf&apos;s Bauen und Entwerfen von Webseiten, Applikationen und allem, was dazwischen liegt.</p>
             <CtaBtn href={"mailto:hallo@nicholas-schneider.de"}>
                 Sag hallo!
