@@ -49,7 +49,7 @@ const StyledLogo = styled.svg`
         }
         100% {
             opacity: 1;
-            transform: rotate(360deg) scale(2);
+            transform: rotate(360deg) scale(1.5);
         }
     }
 
