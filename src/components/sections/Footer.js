@@ -2,7 +2,7 @@ import { CtaBtn } from "@components/CtaBtn";
 import { Headline } from "@components/Headline";
 import { Container } from "@components/Layout";
 import { Logo } from "@components/Logo";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaCodepen, FaGithub, FaInstagram, FaPaperPlane, FaSpotify } from "react-icons/fa";
 import styled from "styled-components";
 import { glassStyle, textOnBg } from "../../styles/variables";
 
@@ -25,24 +25,45 @@ const StyledFooter = styled.footer`
 
     .lists {
         margin-top: 1rem;
-        display: flex;
+        /* display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 2rem;
-        /* flex-wrap: wrap; */
+        gap: 2rem; */
+        display: grid;
+        grid-template-areas: "logo list list list list";
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         @media (max-width: 768px) {
-            flex-wrap: wrap;
+            margin-top: 0rem;
+            grid-template-areas: "logo logo" "list list" "list list";
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 50px repeat(2, 1fr);
+            /* flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-end;
+            align-items: flex-end; */
         }
         > * {
             @media (max-width: 768px) {
-                width: 100%;
+                font-size: 18px;
             }
             width: 25%;
         }
         svg {
             height: 35px;
         }
+        div {
+            width: 100%;
+            grid-area: logo;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            align-self: start;
+            font-size: 25px;
+            justify-content: space-between;
+        }
         ul {
+            grid-area: "list";
             list-style-type: none;
             &:nth-child(2) {
                 li {
@@ -53,6 +74,7 @@ const StyledFooter = styled.footer`
             li {
                 line-height: 1.7;
                 font-weight: 800;
+                width: max-content;
                 a {
                     color: inherit;
                     font-weight: 600;
@@ -94,7 +116,23 @@ export const Footer = () => {
             </StyledContact>
             <StyledFooter id="kontakt">
                 <div className="lists">
-                    <Logo notext color={"var(--white)"} />
+                    <div className="social-links">
+                        <Logo notext color={"var(--white)"} />
+                        <div className="links">
+                            <a target="_blank" rel="noreferrer" href="https://github.com/nchlsschndr">
+                                <FaGithub />
+                            </a>
+                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/nchlsschndr/">
+                                <FaInstagram />
+                            </a>
+                            <a target="_blank" rel="noreferrer" href="https://codepen.io/nchlsschndr">
+                                <FaCodepen />
+                            </a>
+                            <a target="_blank" rel="noreferrer" href="https://open.spotify.com/user/1135788776">
+                                <FaSpotify />
+                            </a>
+                        </div>
+                    </div>
                     <ul>
                         <li>Kontakt</li>
                         <li>
