@@ -17,7 +17,6 @@ const StyledH2 = styled.h2`
     ${(props) =>
         !props.center &&
         css`
-            margin-bottom: 3rem;
             &::before {
                 display: inline-block;
                 content: "";
