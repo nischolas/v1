@@ -94,7 +94,10 @@ export const Hero = () => {
         <HeroSection id="start">
             <h3>Hallo, ich bin Nicholas</h3>
             <h1 title="Ich baue Webseiten.">Ich baue {<WordCycler words={words} />}</h1>
-            <p>Ich bin Frontend (und manchmal auch Backend) Entwickler aus Saarbrücken, spezialisiert auf&apos;s Bauen und Entwerfen von Webseiten, Applikationen und allem, was dazwischen liegt.</p>
+            <p>
+                Ich bin Frontend (und bei Bedarf auch Backend) Entwickler aus Saarbrücken, spezialisiert auf&apos;s Entwerfen und Entwickeln von Webseiten, Applikationen und allem, was dazwischen
+                liegt.
+            </p>
             <CtaBtn href={"mailto:hallo@nicholas-schneider.de"}>
                 Sag hallo!
                 <FaPaperPlane />
