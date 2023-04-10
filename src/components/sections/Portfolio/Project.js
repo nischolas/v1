@@ -25,10 +25,12 @@ const ProjectListItem = styled("li")`
         background-image: url(${(props) => props.image});
         background-position: center;
         background-size: 100%;
+        overflow: hidden;
         filter: grayscale(60%) contrast(1) brightness(60%) hue-rotate(0deg) sepia(0%) blur(0px);
         transition: var(--transition);
         @media (max-width: 768px) {
             filter: none;
+            border-radius: var(--border-radius);
             grid-row: 1 / 3;
             grid-column: 1 / -1;
         }
@@ -49,7 +51,6 @@ const ProjectListItem = styled("li")`
         }
 
         &:hover {
-            background-size: 101%;
             filter: none;
         }
     }
@@ -68,14 +69,17 @@ const ProjectListItem = styled("li")`
         z-index: 2;
 
         @media (max-width: 768px) {
+            ${glassStyle};
             grid-column: 1 / -1;
             grid-row: 3/4;
-            padding: 1rem 1.5rem 1.5rem;
+            z-index: -1;
+            margin-top: calc(-2 * var(--border-radius));
+            padding: 2rem 1.5rem 1.5rem;
             text-align: left;
-            background-color: var(--dark-navy);
-            backdrop-filter: blur(5px);
-            border-bottom-left-radius: var(--border-radius-lg);
-            border-bottom-right-radius: var(--border-radius-lg);
+            border-bottom-left-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
     }
 
@@ -98,7 +102,7 @@ const ProjectListItem = styled("li")`
 
     .project-title {
         font-size: clamp(1.2rem, 5vw, 2rem);
-        color: var(--light-slate);
+        color: var(--slate);
         margin: 0px 0px 20px;
         @media (max-width: 768px) {
             margin-bottom: 0.5rem;

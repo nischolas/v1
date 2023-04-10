@@ -36,7 +36,7 @@ const variables = css`
         --bp-mobile: 768px;
 
         --border-radius: 8px;
-        --border-radius-lg: 8px;
+        --border-radius-lg: 16px;
         --nav-height: 100px;
         --nav-scroll-height: 70px;
 
