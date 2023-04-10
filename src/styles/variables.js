@@ -35,7 +35,7 @@ const variables = css`
 
         --bp-mobile: 768px;
 
-        --border-radius: 4px;
+        --border-radius: 8px;
         --border-radius-lg: 8px;
         --nav-height: 100px;
         --nav-scroll-height: 70px;
@@ -54,7 +54,7 @@ const variables = css`
 export const glassStyle = css`
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.31);
