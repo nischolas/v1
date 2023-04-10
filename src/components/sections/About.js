@@ -79,6 +79,7 @@ const AboutWrapper = styled.div`
         overflow: hidden;
         position: relative;
         ${glassStyle};
+        border-radius: var(--border-radius-lg);
         background: rgba(255, 255, 255, 0.2);
 
         &:hover {
