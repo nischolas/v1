@@ -1,14 +1,15 @@
 import { Headline } from "@components/Headline";
 import styled from "styled-components";
 import { glassStyle } from "../../styles/variables";
+import Image from "next/image";
 
 const AboutWrapper = styled.div`
     margin-top: 10rem;
 
     .split {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 200px min-content 200px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px min-content 100px;
         gap: 0px 0px;
         h2 {
             grid-area: 1 / 1 / 2 / 4;
@@ -22,13 +23,15 @@ const AboutWrapper = styled.div`
 
     .about-text {
         ${glassStyle};
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right-width: 0px;
         font-weight: 700;
         @media (max-width: 768px) {
             font-size: 1rem;
         }
 
         padding: 1.6rem;
-        padding-right: 20%;
         line-height: 1.6;
         grid-area: 2 / 1 / 3 / 4;
         @media (max-width: 768px) {
@@ -62,20 +65,36 @@ const AboutWrapper = styled.div`
 
     .about-img {
         z-index: 1;
-        place-self: center;
-        max-width: 80%;
-        grid-area: 1 / 3 / 4 / 5;
+        /* place-self: center; */
+        grid-area: 1 / 4 / 4 / 6;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        ${glassStyle};
+        background: rgba(255, 255, 255, 0.7);
+
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+        }
+        &::before {
+            content: "";
+            /* z-index: 1; */
+            position: absolute;
+            background-color: var(--navy);
+            width: 100%;
+            height: 100%;
+            /* mix-blend-mode: color; */
+            opacity: 0.5;
+            transition: var(--transition);
+        }
+
         @media (max-width: 768px) {
             grid-area: 1 / 3 / 2 / 5;
         }
         img {
-            filter: drop-shadow(0px -2px 10px var(--dark-navy));
-            clip-path: inset(0 0 0 0 round 0% 0% 20% 20%);
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            @media (max-width: 768px) {
-            }
+            filter: drop-shadow(-30px -0px 40px #10141980);
         }
     }
 `;
@@ -108,17 +127,7 @@ export const About = () => {
                     </div>
                 </div>
                 <div className="about-img">
-                    <div className="person">
-                        <div className="container">
-                            <div className="container-inner">
-                                <img className="circle" />
-                                <img src="img/portrait.png" alt="" />
-                            </div>
-                        </div>
-
-                        {/* <div className="name">Nicholas</div>
-                        <div className="title">Frontend-Entwickler</div> */}
-                    </div>
+                    <Image src={"/img/portrait.png"} layout="fill" objectFit="cover" alt="Portrait Nicholas Schneider" />
                 </div>
             </div>
         </AboutWrapper>
