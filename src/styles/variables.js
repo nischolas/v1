@@ -73,7 +73,7 @@ const fadeIn = keyframes`
 
 export const loadingDelay = 0;
 
-export const fade = (pos = 1) => {
+export const fade = (pos = 0) => {
     const timeDifference = 150;
     return css`
         opacity: 0;
