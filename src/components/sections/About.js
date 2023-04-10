@@ -11,12 +11,18 @@ const AboutWrapper = styled.div`
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 100px min-content 100px;
         gap: 0px 0px;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: min-content repeat(4, 1fr);
+            gap: 0px 0px;
+        }
         h2 {
             grid-area: 1 / 1 / 2 / 4;
             place-self: end start;
             z-index: 3;
             @media (max-width: 768px) {
-                grid-area: 1 / 1 / 2 / 3;
+                grid-column: 1 / 3;
+                grid-row: 1 / 2;
             }
         }
     }
@@ -27,17 +33,21 @@ const AboutWrapper = styled.div`
         border-bottom-right-radius: 0;
         border-right-width: 0px;
         font-weight: 700;
-        @media (max-width: 768px) {
-            font-size: 1rem;
-        }
 
         padding: 1.6rem;
         line-height: 1.6;
         grid-area: 2 / 1 / 3 / 4;
         @media (max-width: 768px) {
+            font-size: 1rem;
             padding-right: 1.6rem;
             z-index: 2;
-            grid-area: 2 / 1 / 4 / 5;
+            grid-column: 1 / 3;
+            grid-row: 4 / 6;
+            border-bottom-right-radius: var(--border-radius);
+            border-top-left-radius: 0;
+            border-top-width: 0;
+            margin-top: calc(-1 * var(--border-radius));
+            border-right-width: 1px;
         }
 
         .tools-wrapper {
@@ -65,13 +75,11 @@ const AboutWrapper = styled.div`
 
     .about-img {
         z-index: 1;
-        /* place-self: center; */
         grid-area: 1 / 4 / 4 / 6;
-        border-radius: 30px;
         overflow: hidden;
         position: relative;
         ${glassStyle};
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.2);
 
         &:hover {
             &::before {
@@ -86,12 +94,14 @@ const AboutWrapper = styled.div`
             width: 100%;
             height: 100%;
             /* mix-blend-mode: color; */
-            opacity: 0.5;
+            opacity: 0.2;
             transition: var(--transition);
         }
 
         @media (max-width: 768px) {
-            grid-area: 1 / 3 / 2 / 5;
+            grid-column: 1 / 3;
+            grid-row: 2 / 4;
+            z-index: 2;
         }
         img {
             filter: drop-shadow(-30px -0px 40px #10141980);
