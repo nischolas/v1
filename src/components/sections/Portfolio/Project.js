@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FaLink } from "react-icons/fa";
 import { glassStyle } from "../../../styles/variables";
-import ScrollReveal from "@components/ScrollReveal";
+import Image from "next/image";
 
 const ProjectListItem = styled("li")`
     display: grid;
@@ -10,24 +10,22 @@ const ProjectListItem = styled("li")`
     align-items: center;
 
     @media (max-width: 768px) {
-        grid-template-rows: repeat(2, 100px);
-        margin-bottom: 2rem;
+        grid-template-rows: repeat(2, 1fr);
         box-shadow: 0 10px 30px -15px black;
     }
 
     .project-image {
-        box-shadow: 0 10px 30px -15px black;
-        grid-area: 1 / 5 / -1 / -1;
+        box-shadow: 0 10px 30px -15px var(--navy-shadow);
         position: relative;
-        z-index: 1;
+        grid-area: 1 / 5 / -1 / -1;
+
         border-radius: var(--border-radius-lg);
         aspect-ratio: 16/10;
-        background-image: url(${(props) => props.image});
-        background-position: center;
-        background-size: 100%;
+
         overflow: hidden;
-        filter: grayscale(60%) contrast(1) brightness(60%) hue-rotate(0deg) sepia(0%) blur(0px);
+        filter: grayscale(60%) brightness(60%);
         transition: var(--transition);
+
         @media (max-width: 768px) {
             filter: none;
             border-radius: var(--border-radius);
@@ -35,23 +33,9 @@ const ProjectListItem = styled("li")`
             grid-column: 1 / -1;
         }
 
-        &::after {
-            transition: var(--transition);
-            z-index: -99;
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            background-color: var(--navy);
-            mix-blend-mode: multiply;
-            opacity: 0.4;
-            @media (max-width: 768px) {
-                display: none;
-            }
-        }
-
         &:hover {
-            filter: none;
+            /* BUG: filter: none hides image when transition finished  */
+            filter: grayscale(0%) brightness(100%);
         }
     }
 
@@ -93,7 +77,7 @@ const ProjectListItem = styled("li")`
         }
     }
 
-    .project-overline {
+    .project-type {
         margin: 10px 0px;
         font-size: 1rem;
         font-weight: 400;
@@ -104,16 +88,17 @@ const ProjectListItem = styled("li")`
         font-size: clamp(1.2rem, 5vw, 2rem);
         color: var(--slate);
         margin: 0px 0px 20px;
+
         @media (max-width: 768px) {
             margin-bottom: 0.5rem;
         }
 
         a {
+            transition: var(--transition);
             color: inherit;
-        }
-        transition: var(--transition);
-        &:hover {
-            color: var(--red);
+            &:hover {
+                color: var(--red);
+            }
         }
     }
 
@@ -137,13 +122,10 @@ const ProjectListItem = styled("li")`
             background-color: transparent;
             padding: 0;
             box-shadow: none;
+            backdrop-filter: none;
         }
 
         a {
-            display: inline-block;
-            text-decoration: none;
-            text-decoration-skip-ink: auto;
-            position: relative;
             transition: var(--transition);
             color: var(--blue);
         }
@@ -184,18 +166,21 @@ const ProjectListItem = styled("li")`
         }
     }
 
-    .project-links {
+    .project-link {
         display: flex;
         align-items: center;
         justify-content: flex-start;
         gap: 1ch;
         font-size: 1rem;
+        color: var(--slate);
+
         transition: var(--transition);
         &:hover {
             color: var(--red);
         }
     }
-    &:nth-of-type(2n + 1) .project-links {
+
+    &:nth-of-type(2n + 1) .project-link {
         justify-content: flex-end;
         @media (max-width: 768px) {
             justify-content: flex-start;
@@ -205,33 +190,31 @@ const ProjectListItem = styled("li")`
 
 export const Project = ({ project }) => {
     return (
-        <ProjectListItem image={project.img} className="project">
+        <ProjectListItem className="project">
             <div className="project-content">
-                <div>
-                    <p className="project-overline">{project.type}</p>
-                    <h3 className="project-title">
-                        <a href={project.link} rel="noreferrer" target="_blank">
-                            {project.name}
-                        </a>
-                    </h3>
-                    <div className="project-description">
-                        <p>{project.desc}</p>
-                    </div>
-                    <ul className="project-tech-list">
-                        {project.tech.map((tag, index) => (
-                            <li key={index}>{tag}</li>
-                        ))}
-                    </ul>
-                    <div className="project-links">
-                        <FaLink />{" "}
-                        <a target="_blank" rel="noreferrer" href={project.link}>
-                            {project.link.replace("https://www.", "")}
-                        </a>
-                    </div>
+                <p className="project-type">{project.type}</p>
+                <h3 className="project-title">
+                    <a href={project.link} rel="noreferrer" target="_blank">
+                        {project.name}
+                    </a>
+                </h3>
+                <div className="project-description">
+                    <p>{project.desc}</p>
+                </div>
+                <ul className="project-tech-list">
+                    {project.tech.map((tag, index) => (
+                        <li key={index}>{tag}</li>
+                    ))}
+                </ul>
+                <div className="project-link">
+                    <FaLink />{" "}
+                    <a target="_blank" rel="noreferrer" href={project.link}>
+                        {project.link.replace("https://www.", "")}
+                    </a>
                 </div>
             </div>
             <a href={project.link} rel="noreferrer" target="_blank" className="project-image">
-                {/* <img src={project.img} alt={project.name} /> */}
+                <Image src={project.img} layout="fill" objectFit="cover" alt={`Screenshot ${project.type} ${project.name}`} />
             </a>
         </ProjectListItem>
     );

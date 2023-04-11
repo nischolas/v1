@@ -34,7 +34,6 @@ const StyledHeader = styled.header`
         !props.scrolledToTop &&
         css`
             height: var(--nav-scroll-height);
-            /* transform: translateY(calc(var(--nav-scroll-height) * -1)); */
             box-shadow: 0 10px 30px -10px var(--navy-shadow);
             backdrop-filter: blur(10px);
             background-color: rgba(16, 20, 25, 0.8);
@@ -48,6 +47,7 @@ const StyledNav = styled.nav`
     width: 100%;
     font-size: 1.1rem;
     font-weight: 800;
+    color: var(--slate);
 
     @media (max-width: 768px) {
         font-size: 1rem;

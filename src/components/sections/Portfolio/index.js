@@ -3,7 +3,7 @@ import { Project } from "./Project.js";
 import styled from "styled-components";
 import { Headline } from "@components/Headline.js";
 
-const PortfolioWrapper = styled.div`
+const PortfolioWrapper = styled.section`
     margin-top: 10rem;
 `;
 

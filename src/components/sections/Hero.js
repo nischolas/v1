@@ -24,7 +24,7 @@ const HeroSection = styled.section`
     }
     h1 {
         font-size: clamp(50px, 9vw, 90px);
-        color: var(--light-slate);
+        color: var(--slate);
         font-weight: 800;
         ${fade(6)};
     }

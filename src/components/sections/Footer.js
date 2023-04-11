@@ -1,10 +1,18 @@
 import { CtaBtn } from "@components/CtaBtn";
 import { Headline } from "@components/Headline";
-import { Container } from "@components/Layout";
 import { Logo } from "@components/Logo";
 import { FaCodepen, FaGithub, FaInstagram, FaPaperPlane, FaSpotify } from "react-icons/fa";
 import styled from "styled-components";
 import { glassStyle, textOnBg } from "../../styles/variables";
+
+const Container = styled.div`
+    padding: 0 var(--padding-inner);
+    max-width: 1400px;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+        padding: var(--padding-mobile);
+    }
+`;
 
 const StyledContact = styled.div`
     margin-top: 20rem;
@@ -25,10 +33,6 @@ const StyledFooter = styled.footer`
 
     .lists {
         margin-top: 1rem;
-        /* display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 2rem; */
         display: grid;
         grid-template-areas: "logo list list list list";
         grid-template-columns: repeat(5, 1fr);
@@ -38,10 +42,6 @@ const StyledFooter = styled.footer`
             grid-template-areas: "logo logo" "list list" "list list";
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 50px repeat(2, 1fr);
-            /* flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: flex-end;
-            align-items: flex-end; */
         }
         > * {
             @media (max-width: 768px) {
@@ -49,21 +49,33 @@ const StyledFooter = styled.footer`
             }
             width: 25%;
         }
+        .icon-links {
+        }
         svg {
             height: 35px;
         }
-        div {
+
+        .social-links {
             width: 100%;
             grid-area: logo;
             display: flex;
             align-items: center;
-            gap: 1.5rem;
             align-self: start;
             font-size: 25px;
             justify-content: space-between;
         }
+
+        .icon-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            justify-content: space-between;
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
         ul {
-            grid-area: "list";
             list-style-type: none;
             &:nth-child(2) {
                 li {
@@ -118,7 +130,7 @@ export const Footer = () => {
                 <div className="lists">
                     <div className="social-links">
                         <Logo notext color={"var(--white)"} />
-                        <div className="links">
+                        <div className="icon-links">
                             <a target="_blank" rel="noreferrer" href="https://github.com/nchlsschndr">
                                 <FaGithub />
                             </a>

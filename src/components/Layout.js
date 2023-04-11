@@ -37,8 +37,8 @@ export const Layout = ({ children, title, noBg }) => {
             </SideInfo>
 
             <Container>{children}</Container>
-
             <Footer />
+
             <ScrollReveal />
         </>
     );
@@ -48,7 +48,6 @@ export const Container = styled.main`
     padding: 0 var(--padding-inner);
     max-width: 1400px;
     margin: 0 auto;
-    /* min-height: 100vh; */
     @media (max-width: 768px) {
         padding: var(--padding-mobile);
     }
@@ -75,7 +74,7 @@ export const LowLevelSiteContainer = styled.div`
     }
     a {
         transition: all 200ms;
-        color: var(--lightest-slate);
+        color: var(--white);
         &:hover {
             color: var(--red);
         }

@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
     const [isOnHp, setIsOnHp] = useState(true);
     const router = useRouter();
 
-    const loadingDuration = 2700;
+    const loadingDuration = 0;
 
     useEffect(() => {
         if (router.pathname !== "/") {

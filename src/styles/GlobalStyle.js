@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`${css`
         margin: 0;
         padding: 0;
     }
+
     ${variables}
 
     html {
@@ -32,11 +33,6 @@ export const GlobalStyle = createGlobalStyle`${css`
         box-sizing: inherit;
     }
 
-    ::selection {
-        background-color: var(--lightest-navy);
-        color: var(--lightest-slate);
-    }
-
     body {
         margin: 0;
         width: 100%;
@@ -45,7 +41,6 @@ export const GlobalStyle = createGlobalStyle`${css`
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         background-color: var(--navy);
-        color: var(--slate);
         font-family: "Nunito";
         font-size: var(--fz-xl);
         line-height: 1.3;

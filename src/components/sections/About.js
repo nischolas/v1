@@ -2,8 +2,9 @@ import { Headline } from "@components/Headline";
 import styled from "styled-components";
 import { glassStyle } from "../../styles/variables";
 import Image from "next/image";
+import useIsViewportLessThanWidth from "../../hooks/useIsMobile";
 
-const AboutWrapper = styled.div`
+const AboutWrapper = styled.section`
     margin-top: 10rem;
 
     .split {
@@ -80,23 +81,11 @@ const AboutWrapper = styled.div`
         position: relative;
         ${glassStyle};
         border-radius: var(--border-radius-lg);
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.5);
+        transition: var(--transition);
 
         &:hover {
-            &::before {
-                opacity: 0;
-            }
-        }
-        &::before {
-            content: "";
-            /* z-index: 1; */
-            position: absolute;
-            background-color: var(--navy);
-            width: 100%;
-            height: 100%;
-            /* mix-blend-mode: color; */
-            opacity: 0.2;
-            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.3);
         }
 
         @media (max-width: 768px) {
@@ -111,6 +100,7 @@ const AboutWrapper = styled.div`
 `;
 
 export const About = () => {
+    const isMobile = useIsViewportLessThanWidth();
     return (
         <AboutWrapper id="ueber-mich">
             <div className="split">
@@ -138,7 +128,7 @@ export const About = () => {
                     </div>
                 </div>
                 <div className="about-img">
-                    <Image src={"/img/portrait.png"} layout="fill" objectFit="cover" alt="Portrait Nicholas Schneider" />
+                    <Image src={isMobile ? "/img/portrait-mobile.png" : "/img/portrait.png"} layout="fill" objectFit="cover" alt="Portrait Nicholas Schneider" />
                 </div>
             </div>
         </AboutWrapper>

@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import useScrollDirection from "src/hooks/useScrollDir";
 import { useEffect, useState } from "react";
-import { fade } from "src/styles/variables";
+import { fade, textOnBg } from "src/styles/variables";
 
 const StyledSideInfo = styled.aside`
     position: fixed;
@@ -12,6 +12,8 @@ const StyledSideInfo = styled.aside`
     gap: 1rem;
     bottom: 0;
     transition: var(--transition);
+    color: var(--slate);
+    ${textOnBg}
 
     ${fade(10)}
 
@@ -33,16 +35,15 @@ const StyledSideInfo = styled.aside`
         props.scrollDirection === "up" &&
         !props.scrolledToTop &&
         css`
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0px);
         `};
 
     ${(props) =>
         props.scrollDirection === "down" &&
         !props.scrolledToTop &&
         css`
-            /* opacity: 0; */
             transform: translateY(50px);
+            opacity: 0;
         `};
 
     &::after {

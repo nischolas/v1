@@ -3,32 +3,31 @@ import { useEffect, useRef } from "react";
 import { fade } from "src/styles/variables";
 
 const wobble = keyframes`
-    from{
-    border-radius: 20% 80% 80% 20% / 20% 20% 80% 80%;
-  }
-  33%{
-    border-radius: 60% 40% 20% 80% / 60% 60% 40% 40%;
-  }
-  66%{
-    border-radius: 50% 50% 50% 50% / 50% 40% 60% 50%;
-  }
-  to{
-    border-radius: 20% 80% 80% 20% / 20% 20% 80% 80%;
-  }
+    from {
+        border-radius: 20% 80% 80% 20% / 20% 20% 80% 80%;
+    }
+    33% {
+        border-radius: 60% 40% 20% 80% / 60% 60% 40% 40%;
+    }
+    66% {
+        border-radius: 50% 50% 50% 50% / 50% 40% 60% 50%;
+    }
+    to {
+        border-radius: 20% 80% 80% 20% / 20% 20% 80% 80%;
+    }
 `;
 const spin = keyframes`
-    from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 `;
 
 const Shadow = styled.div`
     height: 300px;
     width: 300px;
-    /* filter: blur(50px); */
     border-radius: 100%;
     background: linear-gradient(90deg, var(--red) 0%, var(--blue) 100%);
     opacity: 0.2;
@@ -85,7 +84,6 @@ export const Cursor = () => {
 
     return (
         <Trailer ref={TrailerRef}>
-            {/* {icon === "text" ? <TbCursorText /> : icon === "link" ? <HiLink /> : null} */}
             <Shadow />
         </Trailer>
     );
