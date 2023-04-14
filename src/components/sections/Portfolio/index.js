@@ -22,7 +22,7 @@ const ProjectsWrapper = styled.ul`
 export const Portfolio = () => {
     return (
         <PortfolioWrapper id="portfolio">
-            <Headline text="Portfolio" />
+            <Headline text="Mein Portfolio" sub="Eine Auwahl meiner aktuellen Projekte" />
 
             <ProjectsWrapper>
                 {projects.map((project, index) => (

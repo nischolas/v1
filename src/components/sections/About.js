@@ -33,14 +33,19 @@ const AboutWrapper = styled.section`
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right-width: 0px;
-        font-weight: 700;
+        font-weight: 500;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
 
         padding: 1.6rem;
-        line-height: 1.6;
         grid-area: 2 / 1 / 3 / 4;
         @media (max-width: 768px) {
+            /* text-align: justify; */
             font-size: 1rem;
-            padding-right: 1.6rem;
+            padding: 1rem;
+            padding-top: 1.6rem;
             z-index: 2;
             grid-column: 1 / 3;
             grid-row: 4 / 6;
@@ -55,7 +60,7 @@ const AboutWrapper = styled.section`
             display: flex;
             gap: 2rem;
             @media (max-width: 768px) {
-                gap: 0rem;
+                gap: 1rem;
             }
 
             ul {
@@ -104,20 +109,22 @@ export const About = () => {
     return (
         <AboutWrapper id="ueber-mich">
             <div className="split">
-                <Headline text="Über mich" />
+                <Headline text="Das bin ich" />
                 <div className="about-text">
+                    <p>Hey, ich bin leidenschaftlicher Webentwickler und arbeite daran, das Internet ein bisschen schöner und bedienbarer zu machen.</p>
                     <p>
-                        Herzlich willkommen auf meiner Webseite! Ich bin ein gelernter Mediengestalter aus Saarbrücken und habe mir in meiner Freizeit selbst die Welt der Webentwicklung beigebracht.
-                        Ich liebe es, neue Technologien und Entwicklungen in diesem Bereich zu erforschen und anzuwenden.
+                        Wenn Du auf der Suche nach einem zuverlässigen und erfahrenen Entwickler bist, der sich auf die Erstellung moderner und funktionaler Websites spezialisiert hat, dann bist Du
+                        bei mir genau richtig.
                     </p>
+                    <p>Egal ob es sich um eine einfache Landingpage oder eine komplexe Webanwendung handelt - ich stelle sicher, immer das beste Ergebnis abzuliefern.</p>
                     <br />
                     <p>Diese Tools habe ich kürzlich benutzt:</p>
                     <div className="tools-wrapper">
                         <ul>
-                            <li>Javascript (ES6+)</li>
                             <li>React</li>
                             <li>Next.js</li>
                             <li>Astro JS</li>
+                            <li>Python</li>
                         </ul>
                         <ul>
                             <li>Tailwind CSS</li>
