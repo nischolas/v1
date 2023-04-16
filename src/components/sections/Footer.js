@@ -3,7 +3,7 @@ import { Headline } from "@components/Headline";
 import { Logo } from "@components/Logo";
 import { FaCodepen, FaGithub, FaInstagram, FaPaperPlane, FaSpotify } from "react-icons/fa";
 import styled from "styled-components";
-import { glassStyle, textOnBg } from "../../styles/variables";
+import { glassStyle, textOnBg } from "src/styles/variables";
 
 const Container = styled.div`
     padding: 0 var(--padding-inner);

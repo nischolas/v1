@@ -1,8 +1,8 @@
 import { Headline } from "@components/Headline";
 import styled from "styled-components";
-import { glassStyle } from "../../styles/variables";
+import { glassStyle } from "src/styles/variables";
 import Image from "next/image";
-import useIsViewportLessThanWidth from "../../hooks/useIsMobile";
+import useIsViewportLessThanWidth from "src/hooks/useIsMobile";
 
 const AboutWrapper = styled.section`
     margin-top: 10rem;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FaLink } from "react-icons/fa";
-import { glassStyle } from "../../../styles/variables";
+import { glassStyle } from "src/styles/variables";
 import Image from "next/image";
 
 const ProjectListItem = styled("li")`
