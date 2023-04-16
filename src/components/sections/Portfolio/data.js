@@ -10,7 +10,7 @@ export const data = [
     {
         name: "Heiraten mit Bernd",
         type: "Website",
-        desc: "Ein Hochzeitsredner-Webseite. Von Grund auf und mit Liebe von Hand geschrieben, für die persönliche Note.",
+        desc: "Eine Hochzeitsredner-Webseite. Von Grund auf und mit Liebe von Hand geschrieben, für die persönliche Note.",
         tech: ["JS ES6", "SCSS", "HTML"],
         link: "https://www.heiraten-mit-bernd.de",
         img: "/img/heiraten-mit-bernd.png",

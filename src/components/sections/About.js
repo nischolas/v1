@@ -116,7 +116,7 @@ export const About = () => {
                     </p>
                     <p>Egal ob es sich um eine einfache Landingpage oder eine komplexe Webanwendung handelt - ich stelle sicher, immer das beste Ergebnis abzuliefern.</p>
                     <br />
-                    <p>Diese Tools habe ich kürzlich benutzt:</p>
+                    <p>Diese Tools setze ich unter anderem ein:</p>
                     <div className="tools-wrapper">
                         <ul>
                             <li>React</li>
