@@ -40,7 +40,7 @@ export const GlobalStyle = createGlobalStyle`${css`
         overflow-x: hidden;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
-        background-color: var(--navy);
+        background-color: var(--color-main);
         font-family: "Nunito";
         font-size: var(--fz-xl);
         line-height: 1.3;

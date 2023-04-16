@@ -12,7 +12,7 @@ const StyledLoadingWrapper = styled.div`
 const StyledLogo = styled.svg`
     width: 20rem;
     path {
-        fill: ${(props) => (props.color ? props.color : "var(--red)")};
+        fill: ${(props) => (props.color ? props.color : "var(--color-accent)")};
     }
     .logo-path {
         animation-timing-function: cubic-bezier(0.27, 0.81, 0.56, 0.99);
@@ -55,10 +55,10 @@ const StyledLogo = styled.svg`
 
     @keyframes logopath1 {
         from {
-            transform: translateX(0px);
+            transform: translateX(0rem);
         }
         to {
-            transform: translateX(-10px);
+            transform: translateX(-1rem);
             opacity: 0;
         }
     }
@@ -74,10 +74,10 @@ const StyledLogo = styled.svg`
     }
     @keyframes logopath3 {
         from {
-            transform: translateX(0px);
+            transform: translateX(0rem);
         }
         to {
-            transform: translateX(10px);
+            transform: translateX(1rem);
             opacity: 0;
         }
     }

@@ -21,8 +21,8 @@ const BgMoving = styled.div`
     height: 90%;
     opacity: 0.5;
     background-image: radial-gradient(red 0.1rem, transparent 0);
-    background-size: 40px 40px;
-    background-position: 35px 35px;
+    background-size: 2.5rem 2.5rem;
+    background-position: 2.2rem 2.2rem;
     @media (max-width: 768px) {
         background-size: 10vw 10vw;
         background-position: 0 0;
@@ -32,7 +32,7 @@ const BgMoving = styled.div`
         position: absolute;
         width: 100%;
         height: 50%;
-        background-image: linear-gradient(to bottom, var(--navy), rgba(0, 0, 0, 0) 100%);
+        background-image: linear-gradient(to bottom, var(--color-main), rgba(0, 0, 0, 0) 100%);
     }
 `;
 

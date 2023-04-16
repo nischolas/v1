@@ -10,12 +10,11 @@ const AboutWrapper = styled.section`
     .split {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px min-content 100px;
-        gap: 0px 0px;
+        grid-template-rows: 4rem min-content 4rem;
+
         @media (max-width: 768px) {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: min-content repeat(4, 1fr);
-            gap: 0px 0px;
         }
         h2 {
             grid-area: 1 / 1 / 2 / 4;
@@ -42,8 +41,7 @@ const AboutWrapper = styled.section`
         padding: 1.6rem;
         grid-area: 2 / 1 / 3 / 4;
         @media (max-width: 768px) {
-            /* text-align: justify; */
-            font-size: 1rem;
+            font-size: var(--fz-md);
             padding: 1rem;
             padding-top: 1.6rem;
             z-index: 2;
@@ -71,8 +69,8 @@ const AboutWrapper = styled.section`
                     gap: 0.3em;
                     &::before {
                         content: "❯";
-                        font-size: 1rem;
-                        color: var(--slate);
+                        font-size: var(--fz-md);
+                        color: var(--color-main-lightest);
                     }
                 }
             }

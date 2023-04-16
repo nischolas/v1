@@ -23,10 +23,10 @@ const StyledHeader = styled.header`
         props.scrollDirection === "up" &&
         !props.scrolledToTop &&
         css`
-            background-color: var(--navy);
+            background-color: var(--color-main);
             height: var(--nav-scroll-height);
-            transform: translateY(0px);
-            box-shadow: 0 10px 30px -10px var(--navy-shadow);
+            transform: translateY(0rem);
+            box-shadow: 0 10px 30px -10px var(--shadow);
         `};
 
     ${(props) =>
@@ -34,8 +34,8 @@ const StyledHeader = styled.header`
         !props.scrolledToTop &&
         css`
             height: var(--nav-scroll-height);
-            box-shadow: 0 10px 30px -10px var(--navy-shadow);
-            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px -10px var(--shadow);
+            backdrop-filter: blur(1rem);
             background-color: rgba(16, 20, 25, 0.8);
         `};
 `;
@@ -45,12 +45,12 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: var(--fz-xl);
     font-weight: 800;
-    color: var(--slate);
+    color: var(--color-main-lightest);
 
     @media (max-width: 768px) {
-        font-size: 1rem;
+        font-size: var(--fz-md);
     }
 
     .links ul {
@@ -78,7 +78,7 @@ const StyledNav = styled.nav`
                 transition: var(--transition);
 
                 &:hover {
-                    color: var(--red);
+                    color: var(--color-accent);
                 }
             }
         }

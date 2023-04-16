@@ -28,7 +28,7 @@ const StyledContact = styled.div`
 const StyledFooter = styled.footer`
     ${glassStyle};
     margin-top: 0rem;
-    padding: 25px;
+    padding: 1.5rem;
     font-weight: 700;
 
     .lists {
@@ -41,18 +41,18 @@ const StyledFooter = styled.footer`
             margin-top: 0rem;
             grid-template-areas: "logo logo" "list list" "list list";
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 50px repeat(2, 1fr);
+            grid-template-rows: 3rem repeat(2, 1fr);
         }
         > * {
             @media (max-width: 768px) {
-                font-size: 18px;
+                font-size: var(--fz-md);
             }
             width: 25%;
         }
         .icon-links {
         }
         svg {
-            height: 35px;
+            height: 2rem;
         }
 
         .social-links {
@@ -61,7 +61,7 @@ const StyledFooter = styled.footer`
             display: flex;
             align-items: center;
             align-self: start;
-            font-size: 25px;
+            font-size: var(--fz-xxl);
             justify-content: space-between;
         }
 
@@ -108,7 +108,7 @@ const StyledFooter = styled.footer`
 
 const Credits = styled.p`
     text-align: center;
-    color: var(--slate);
+    color: var(--color-main-lightest);
     margin-top: 3rem;
     margin-bottom: 3rem;
     font-weight: 700;
@@ -129,7 +129,7 @@ export const Footer = () => {
             <StyledFooter id="kontakt">
                 <div className="lists">
                     <div className="social-links">
-                        <Logo notext color={"var(--white)"} />
+                        <Logo notext color={"var(--color-white)"} />
                         <div className="icon-links">
                             <a target="_blank" rel="noreferrer" href="https://github.com/nchlsschndr">
                                 <FaGithub />

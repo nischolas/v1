@@ -19,18 +19,18 @@ const HeroSection = styled.section`
     }
     h2 {
         font-size: clamp(var(--fz-md), 2vw, var(--fz-xxl));
-        color: var(--red);
+        color: var(--color-accent);
         ${fade(5)};
     }
     h1 {
         font-size: clamp(50px, 9vw, 90px);
-        color: var(--slate);
+        color: var(--color-main-lightest);
         font-weight: 800;
         ${fade(6)};
     }
 
     h3 {
-        color: var(--red);
+        color: var(--color-accent);
         margin-top: -0.5rem;
         font-weight: 800;
         font-size: clamp(var(--fz-xxl), 3vw, var(--fz-heading));
@@ -43,31 +43,31 @@ const HeroSection = styled.section`
     }
 `;
 
-const breatheAnimation = keyframes`
+const cycling = keyframes`
     0% {
         opacity: 0;
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
     10% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0rem);
     }
     90% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0rem);
     }
     100% {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(2rem);
     }
 `;
 
 const StyledWord = styled.span`
-    animation-name: ${breatheAnimation};
+    animation-name: ${cycling};
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-duration: 3000ms;
-    color: var(--white);
+    color: var(--color-white);
     display: inline-block;
 `;
 

@@ -12,7 +12,7 @@ const StyledSideInfo = styled.aside`
     gap: 1rem;
     bottom: 0;
     transition: var(--transition);
-    color: var(--slate);
+    color: var(--color-main-lightest);
     ${textOnBg}
 
     ${fade(10)}
@@ -35,14 +35,14 @@ const StyledSideInfo = styled.aside`
         props.scrollDirection === "up" &&
         !props.scrolledToTop &&
         css`
-            transform: translateY(0px);
+            transform: translateY(0rem);
         `};
 
     ${(props) =>
         props.scrollDirection === "down" &&
         !props.scrolledToTop &&
         css`
-            transform: translateY(50px);
+            transform: translateY(3rem);
             opacity: 0;
         `};
 
@@ -50,16 +50,14 @@ const StyledSideInfo = styled.aside`
         content: "";
         display: block;
         width: 2px;
-        height: 80px;
-        background-color: var(--slate);
+        height: 5rem;
+        background-color: var(--color-main-lightest);
     }
     a {
-        margin: 0;
-        padding: 0;
         writing-mode: vertical-rl;
         transition: var(--transition);
         &:hover {
-            color: var(--red);
+            color: var(--color-accent);
         }
     }
 `;

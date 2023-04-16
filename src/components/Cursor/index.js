@@ -29,7 +29,7 @@ const Shadow = styled.div`
     height: 300px;
     width: 300px;
     border-radius: 100%;
-    background: linear-gradient(90deg, var(--red) 0%, var(--blue) 100%);
+    background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
     opacity: 0.2;
     animation: ${wobble} 3s linear infinite, ${spin} 12s linear infinite;
     z-index: -9999;

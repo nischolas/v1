@@ -9,7 +9,6 @@ const PortfolioWrapper = styled.section`
 
 const ProjectsWrapper = styled.ul`
     list-style: none;
-    padding: 0px;
     display: flex;
     flex-direction: column;
     gap: 10rem;

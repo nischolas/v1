@@ -2,34 +2,37 @@ import { css, keyframes } from "styled-components";
 
 const variables = css`
     :root {
-        --navy: #101419;
-        --light-navy: #202030; // ctabtn
-        --navy-shadow: rgba(2, 12, 27, 0.9);
-        --slate: #8892b0;
-        --white: #e6f1ff;
-        --blue: #47c2ff;
-        --red: #dd0033;
-        --red2: #c40467;
+        --color-main: #101419;
+        --color-main-lighter: #10101a;
+        --color-main-lightest: #8892b0;
+        --color-white: #e6f1ff;
+        --color-accent: #dd0033;
+        --color-accent-alt: #c40467;
+        --color-accent-secondary: #47c2ff;
+        --shadow: rgba(2, 12, 27, 0.9);
 
-        --fz-xxs: 12px;
-        --fz-md: 16px;
-        --fz-xl: 20px;
-        --fz-xxl: 22px;
-        --fz-heading: 32px;
+        --fz-xxs: 0.75rem;
+        --fz-md: 1rem;
+        --fz-xl: 1.25rem;
+        --fz-xxl: 1.375rem;
+        --fz-heading: 2rem;
 
         --padding-outer: 3rem;
         --padding-inner: clamp(8rem, 10vw, 10rem);
 
         --padding-mobile: 1rem;
 
-        --border-radius: 8px;
-        --border-radius-lg: 16px;
+        --border-radius: 0.5rem;
+        --border-radius-lg: 1rem;
 
-        --nav-height: 100px;
-        --nav-scroll-height: 70px;
+        --nav-height: 6.25rem;
+        --nav-scroll-height: 4.375rem;
 
         --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
         --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        @media (max-width: 1600px) {
+            font-size: 14px;
+        }
     }
 `;
 
@@ -37,14 +40,15 @@ export const glassStyle = css`
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.31);
-    color: var(--white);
+    color: var(--color-white);
 `;
 
 export const textOnBg = css`
-    text-shadow: 0px 0px 5px var(--navy), 0px 0px 5px var(--navy), 0px 0px 5px var(--navy), 5px 5px 10px var(--navy), 5px -5px 10px var(--navy), -5px -5px 10px var(--navy), -5px 5px 10px var(--navy);
+    text-shadow: 0px 0px 0.25rem var(--color-main), 0px 0px 0.25rem var(--color-main), 0px 0px 0.25rem var(--color-main), 0.25rem 0.25rem 10px var(--color-main),
+        0.25rem -0.25rem 10px var(--color-main), -0.25rem -0.25rem 10px var(--color-main), -0.25rem 0.25rem 10px var(--color-main);
 `;
 
 const fadeIn = keyframes`

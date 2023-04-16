@@ -1,21 +1,22 @@
 import styled, { css } from "styled-components";
 
 const StyledH2 = styled.h2`
-    color: var(--red);
+    color: var(--color-accent);
     margin-bottom: 1rem;
-    /* display: flex;
-    align-items: flex-end; */
-    gap: 1rem;
-    font-size: 3rem;
 
-    /* background: linear-gradient(90deg, var(--red), var(--red2));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    gap: 1rem;
+    font-size: var(--fz-heading);
+
+    ${(props) =>
+        props.center &&
+        css`
+            text-align: center;
+            font-size: calc(1.5 * var(--fz-heading));
+        `};
 
     .sub {
-        font-size: 1.4rem;
-        color: var(--slate);
+        font-size: var(--fz-xxl);
+        color: var(--color-main-lightest);
         margin-bottom: 0.4rem;
         display: block;
         margin-bottom: 3rem;
@@ -28,7 +29,7 @@ export const Headline = ({ center, text, sub }) => {
     return (
         <StyledH2 center={center}>
             <span>
-                <small>❯</small> {text}
+                {!center && <small>❯</small>} {text}
             </span>
             {sub && (
                 <>

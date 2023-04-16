@@ -5,7 +5,6 @@ import Image from "next/image";
 
 const ProjectListItem = styled("li")`
     display: grid;
-    gap: 10px;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
 
@@ -15,7 +14,7 @@ const ProjectListItem = styled("li")`
     }
 
     .project-image {
-        box-shadow: 0 10px 30px -15px var(--navy-shadow);
+        box-shadow: 0 10px 30px -15px var(--shadow);
         position: relative;
         grid-area: 1 / 5 / -1 / -1;
 
@@ -51,6 +50,9 @@ const ProjectListItem = styled("li")`
         position: relative;
         grid-area: 1 / 1 / -1 / 7;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
         @media (max-width: 768px) {
             ${glassStyle};
@@ -78,26 +80,21 @@ const ProjectListItem = styled("li")`
     }
 
     .project-type {
-        margin: 10px 0px;
-        font-size: 1rem;
+        font-size: var(--fz-md);
         font-weight: 400;
-        color: var(--blue);
+        color: var(--color-accent-secondary);
     }
 
     .project-title {
-        font-size: clamp(1.2rem, 5vw, 2rem);
-        color: var(--slate);
-        margin: 0px 0px 20px;
-
-        @media (max-width: 768px) {
-            margin-bottom: 0.5rem;
-        }
+        font-size: clamp(var(--fz-xl), 5vw, var(--fz-heading));
+        color: var(--color-main-lightest);
+        margin-top: -1rem;
 
         a {
             transition: var(--transition);
             color: inherit;
             &:hover {
-                color: var(--red);
+                color: var(--color-accent);
             }
         }
     }
@@ -106,15 +103,13 @@ const ProjectListItem = styled("li")`
         transition: var(--transition);
         position: relative;
         z-index: 2;
-        padding: 25px;
-        font-size: 1.2rem;
+        padding: 1.5rem;
+        font-size: var(--fz-xl);
         @media (max-width: 768px) {
-            font-size: 1rem;
             border: none;
             background: none;
         }
         font-weight: 700;
-        margin-bottom: 1rem;
 
         ${glassStyle};
 
@@ -127,7 +122,7 @@ const ProjectListItem = styled("li")`
 
         a {
             transition: var(--transition);
-            color: var(--blue);
+            color: var(--color-accent-secondary);
         }
     }
 
@@ -137,20 +132,14 @@ const ProjectListItem = styled("li")`
         position: relative;
         gap: 1rem;
         z-index: 2;
-        margin-bottom: 1rem;
-        padding: 0px;
         list-style: none;
-
-        @media (max-width: 768px) {
-            margin-bottom: 0.5rem;
-        }
 
         li {
             color: white;
-            font-size: 0.8rem;
+            font-size: var(--fz-xxs);
             font-weight: 800;
             white-space: nowrap;
-            background-color: var(--red);
+            background-color: var(--color-accent);
             padding: 0.2rem 0.5rem 0.1rem;
             border-radius: 0.5rem;
             text-shadow: 1px 1px 5px black;
@@ -171,12 +160,12 @@ const ProjectListItem = styled("li")`
         align-items: center;
         justify-content: flex-start;
         gap: 1ch;
-        font-size: 1rem;
-        color: var(--slate);
+        font-size: var(--fz-md);
+        color: var(--color-main-lightest);
 
         transition: var(--transition);
         &:hover {
-            color: var(--red);
+            color: var(--color-accent);
         }
     }
 

@@ -10,26 +10,26 @@ const StyledCtaBtn = styled.a`
     margin-top: 2rem;
     margin-bottom: 25vh;
 
-    background-color: var(--navy);
+    background-color: var(--color-main);
 
     border-radius: var(--border-radius);
     width: fit-content;
-    color: var(--red);
+    color: var(--color-accent);
     transition: var(--transition);
-    font-weight: bold;
-    background-color: var(--light-navy);
+    font-weight: 800;
+    background-color: var(--color-main-lighter);
 
     ${fade(9)}
 
-    box-shadow: 0px 0px 0px 2px var(--red);
+    box-shadow: 0px 0px 0px 2px var(--color-accent);
 
     svg {
         transition: var(--transition);
     }
     &:hover {
         gap: 1rem;
-        background-color: var(--navy);
-        box-shadow: 0px 0px 0px 4px var(--red);
+        background-color: var(--color-main);
+        box-shadow: 0px 0px 0px 4px var(--color-accent);
 
         svg {
             transform: scale(1.2);

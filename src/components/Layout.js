@@ -54,7 +54,7 @@ export const Container = styled.main`
 `;
 
 export const LowLevelSiteContainer = styled.div`
-    padding-top: 200px;
+    padding-top: 12.5rem;
     line-height: 1.4;
     h1 {
         margin: 1rem 0 2rem;
@@ -74,9 +74,9 @@ export const LowLevelSiteContainer = styled.div`
     }
     a {
         transition: all 200ms;
-        color: var(--white);
+        color: var(--color-white);
         &:hover {
-            color: var(--red);
+            color: var(--color-accent);
         }
         font-weight: bold;
     }

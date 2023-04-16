@@ -11,7 +11,7 @@ const LogoContainer = styled.div`
     p {
         display: none;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: var(--fz-xl);
         line-height: 1;
         @media (min-width: 600px) {
             display: inline-block;
@@ -78,7 +78,7 @@ const LogoContainer = styled.div`
 const StyledLogo = styled.svg`
     max-width: 2rem;
     path {
-        fill: ${(props) => (props.color ? props.color : "var(--red)")};
+        fill: ${(props) => (props.color ? props.color : "var(--color-accent)")};
     }
 `;
 
