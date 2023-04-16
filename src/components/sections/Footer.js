@@ -20,7 +20,9 @@ const StyledContact = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h3 {
+        color: var(--color-white);
         ${textOnBg}
     }
 `;

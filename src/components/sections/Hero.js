@@ -33,6 +33,7 @@ const HeroSection = styled.section`
         ${fade(4)};
     }
     p {
+        color: var(--color-white);
         font-weight: 700;
         margin-top: 1rem;
         ${fade(6)};
