@@ -13,23 +13,10 @@ const StyledSideInfo = styled.aside`
     bottom: 0;
     transition: var(--transition);
     color: var(--color-main-lightest);
-    ${textOnBg}
-
-    ${fade(8)}
 
     @media (max-width: 768px) {
         display: none;
     }
-    ${(props) =>
-        props.pos === "right"
-            ? css`
-                  right: var(--padding-outer);
-                  left: auto;
-              `
-            : css`
-                  left: var(--padding-outer);
-                  right: auto;
-              `}
 
     ${(props) =>
         props.scrollDirection === "up" &&
@@ -43,8 +30,18 @@ const StyledSideInfo = styled.aside`
         !props.scrolledToTop &&
         css`
             transform: translateY(3rem);
-            opacity: 0;
         `};
+
+    ${(props) =>
+        props.pos === "right"
+            ? css`
+                  right: var(--padding-outer);
+                  left: auto;
+              `
+            : css`
+                  left: var(--padding-outer);
+                  right: auto;
+              `}
 
     &::after {
         content: "";
@@ -60,6 +57,14 @@ const StyledSideInfo = styled.aside`
             color: var(--color-accent);
         }
     }
+
+    /* Separate because conflict with scroll style */
+    &::after,
+    a {
+        ${fade(8)}
+    }
+
+    ${textOnBg}
 `;
 
 export const SideInfo = ({ pos, children }) => {

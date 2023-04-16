@@ -24,8 +24,7 @@ const StyledHeader = styled.header`
         !props.scrolledToTop &&
         css`
             background-color: var(--color-main);
-            height: var(--nav-scroll-height);
-            transform: translateY(0rem);
+            height: var(--nav-height);
             box-shadow: 0 10px 30px -10px var(--shadow);
         `};
 

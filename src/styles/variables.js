@@ -63,7 +63,7 @@ export const loadingAni2Duration = loadingDuration / 3.4;
 export const loadingAni2Delay = loadingDuration / 1.41;
 
 export const fade = (pos = 0) => {
-    const timeDifference = 60;
+    const timeDifference = 85;
     return css`
         opacity: 0;
         transform: translateY(2rem);
