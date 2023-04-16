@@ -1,4 +1,7 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import { loadingAni1Duration } from "src/styles/variables";
+import { loadingAni2Duration } from "src/styles/variables";
+import { loadingAni2Delay } from "src/styles/variables";
 
 const StyledLoadingWrapper = styled.div`
     position: fixed;
@@ -16,15 +19,14 @@ const StyledLogo = styled.svg`
     }
     .logo-path {
         animation-timing-function: cubic-bezier(0.27, 0.81, 0.56, 0.99);
-        animation-duration: 500ms;
-        animation-delay: 1700ms;
+        animation-duration: ${loadingAni2Duration}ms;
+        animation-delay: ${loadingAni2Delay}ms;
         animation-fill-mode: forwards;
     }
 
     animation-name: logoturn;
     animation-fill-mode: forwards;
-    animation-duration: 1s;
-    animation-delay: 500ms;
+    animation-duration: ${loadingAni1Duration}ms;
     opacity: 0;
 
     .logo-path-1 {

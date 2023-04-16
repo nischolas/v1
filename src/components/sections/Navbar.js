@@ -63,13 +63,13 @@ const StyledNav = styled.nav`
 
         li {
             &:nth-child(1) {
-                ${fade(2)}
+                ${fade(1)}
             }
             &:nth-child(2) {
-                ${fade(3)}
+                ${fade(2)}
             }
             &:nth-child(3) {
-                ${fade(4)}
+                ${fade(3)}
             }
             a {
                 padding: 0.5rem 1rem;

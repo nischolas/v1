@@ -56,10 +56,14 @@ const fadeIn = keyframes`
     to { transform: translateY(0); opacity:1; }
 `;
 
-export const loadingDelay = 0;
+export const loadingDuration = 1700;
+
+export const loadingAni1Duration = loadingDuration / 1.7;
+export const loadingAni2Duration = loadingDuration / 3.4;
+export const loadingAni2Delay = loadingDuration / 1.41;
 
 export const fade = (pos = 0) => {
-    const timeDifference = 150;
+    const timeDifference = 60;
     return css`
         opacity: 0;
         transform: translateY(2rem);
@@ -67,7 +71,7 @@ export const fade = (pos = 0) => {
         animation-fill-mode: forwards;
         animation-duration: 1s;
         animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-        animation-delay: ${loadingDelay + timeDifference * pos}ms;
+        animation-delay: ${timeDifference * pos}ms;
     `;
 };
 

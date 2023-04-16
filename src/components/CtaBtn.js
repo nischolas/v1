@@ -19,7 +19,7 @@ const StyledCtaBtn = styled.a`
     font-weight: 800;
     background-color: var(--color-main-lighter);
 
-    ${fade(9)}
+    ${fade(7)}
 
     box-shadow: 0px 0px 0px 2px var(--color-accent);
 

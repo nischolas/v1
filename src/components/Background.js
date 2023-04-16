@@ -12,7 +12,7 @@ const BgContainer = styled.div`
     top: 0;
     left: -100vw;
     z-index: -9999;
-    ${fade(15)}
+    ${fade(9)}
 `;
 const BgMoving = styled.div`
     position: relative;

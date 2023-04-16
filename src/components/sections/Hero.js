@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 
 const HeroSection = styled.section`
     min-height: 100vh;
-    /* max-width: 55ch; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -17,16 +16,12 @@ const HeroSection = styled.section`
     p {
         ${textOnBg};
     }
-    h2 {
-        font-size: clamp(var(--fz-md), 2vw, var(--fz-xxl));
-        color: var(--color-accent);
-        ${fade(5)};
-    }
+
     h1 {
         font-size: clamp(50px, 9vw, 90px);
         color: var(--color-main-lightest);
         font-weight: 800;
-        ${fade(6)};
+        ${fade(5)};
     }
 
     h3 {
@@ -34,12 +29,12 @@ const HeroSection = styled.section`
         margin-top: -0.5rem;
         font-weight: 800;
         font-size: clamp(var(--fz-xxl), 3vw, var(--fz-heading));
-        ${fade(7)};
+        ${fade(4)};
     }
     p {
         font-weight: 700;
         margin-top: 1rem;
-        ${fade(8)};
+        ${fade(6)};
     }
 `;
 
@@ -89,7 +84,8 @@ const WordCycler = ({ words }) => {
 };
 
 export const Hero = () => {
-    const words = ["Webseiten", "Web-Apps", "Interaktivität", "Frontends", "Backends"];
+    // max 14 chars
+    const words = ["Webseiten", "Layouts", "Web-Apps", "Landingpages", "Interaktivität"];
     return (
         <HeroSection id="start">
             <h3>Hallo, ich bin Nicholas</h3>

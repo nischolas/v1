@@ -51,7 +51,7 @@ const Trailer = styled.div`
     display: grid;
     place-items: center;
 
-    ${fade(16)}
+    ${fade(10)}
 
     @media (max-width: 768px) {
         display: none;

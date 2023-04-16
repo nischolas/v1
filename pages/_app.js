@@ -9,19 +9,17 @@ import "@fontsource/nunito/900.css";
 
 import Head from "next/head";
 import { useRouter } from "next/router";
-
 import { useEffect, useState } from "react";
 
 import { Loading } from "@components/Loading";
-
 import { GlobalStyle } from "src/styles/GlobalStyle";
+
+import { loadingDuration } from "src/styles/variables";
 
 function MyApp({ Component, pageProps }) {
     const [loading, setLoading] = useState(true);
     const [isOnHp, setIsOnHp] = useState(true);
     const router = useRouter();
-
-    const loadingDuration = 0;
 
     useEffect(() => {
         if (router.pathname !== "/") {

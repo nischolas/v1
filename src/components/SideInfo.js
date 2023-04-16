@@ -15,7 +15,7 @@ const StyledSideInfo = styled.aside`
     color: var(--color-main-lightest);
     ${textOnBg}
 
-    ${fade(10)}
+    ${fade(8)}
 
     @media (max-width: 768px) {
         display: none;
