@@ -36,7 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Heavily inspired by [Brittany Chiang](https://github.com/bchiang7/v4), built entirely by myself.
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used, take a look at the docs:
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs)
+-   [Styled Components Documentation](https://styled-components.com/docs)
