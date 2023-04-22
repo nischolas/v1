@@ -56,7 +56,7 @@ const fadeIn = keyframes`
     to { transform: translateY(0); opacity:1; }
 `;
 
-export const loadingDuration = 1700;
+export const loadingDuration = process.env.NODE_ENV === "production" ? 1700 : 200;
 
 export const loadingAni1Duration = loadingDuration / 1.7;
 export const loadingAni2Duration = loadingDuration / 3.4;
