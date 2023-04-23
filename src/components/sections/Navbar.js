@@ -34,8 +34,7 @@ const StyledHeader = styled.header`
         css`
             height: var(--nav-scroll-height);
             box-shadow: 0 10px 30px -10px var(--shadow);
-            backdrop-filter: blur(1rem);
-            background-color: rgba(16, 20, 25, 0.8);
+            background-color: var(--color-main);
         `};
 `;
 
@@ -96,7 +95,9 @@ const StyledNav = styled.nav`
     }
 `;
 
-const StyledNavLink = styled(Link)``;
+const StyledNavLink = styled(Link)`
+    color: red !important;
+`;
 
 export const Navbar = () => {
     const scrollDirection = useScrollDirection("down");
