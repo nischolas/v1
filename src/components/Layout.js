@@ -7,6 +7,7 @@ import { Background } from "./Background";
 import { FaInstagram, FaGithub, FaCodepen, FaSpotify } from "react-icons/fa";
 import { Cursor } from "./Cursor";
 import ScrollReveal from "./ScrollReveal";
+import CookieBanner from "src/components/CookieBanner";
 
 export const Layout = ({ children, title, noBg }) => {
     return (
@@ -16,6 +17,7 @@ export const Layout = ({ children, title, noBg }) => {
             </Head>
             {!noBg && <Background />}
             <Cursor />
+            {/* <CookieBanner /> */}
 
             <Navbar />
             <SideInfo pos={"right"}>
