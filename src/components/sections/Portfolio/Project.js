@@ -9,6 +9,12 @@ const ProjectListItem = styled("li")`
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
 
+    &:hover {
+        .project-image {
+            filter: grayscale(0%) brightness(100%);
+        }
+    }
+
     @media (max-width: 768px) {
         grid-template-rows: repeat(2, 1fr);
         box-shadow: 0 10px 30px -15px black;
@@ -33,10 +39,9 @@ const ProjectListItem = styled("li")`
             grid-column: 1 / -1;
         }
 
-        &:hover {
-            /* BUG: filter: none hides image when transition finished  */
+        /* &:hover {
             filter: grayscale(0%) brightness(100%);
-        }
+        } */
     }
 
     &:nth-of-type(2n + 1) .project-image {
@@ -208,7 +213,7 @@ export const Project = ({ project }) => {
             </div>
             <a href={url} rel="noreferrer" target="_blank" className="project-image">
                 {/* unoptimized bc strapi for now https://github.com/vercel/next.js/discussions/39239 */}
-                <Image unoptimized={true} src={`http://localhost:1337${imgurl}`} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
+                <Image unoptimized={true} src={`http://localhost:1338${imgurl}`} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
             </a>
         </ProjectListItem>
     );
