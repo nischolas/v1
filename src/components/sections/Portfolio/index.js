@@ -22,7 +22,7 @@ const ProjectsWrapper = styled.ul`
 export const Portfolio = () => {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:1338/api/projects?populate=*")
+        fetch("http://localhost:1337/api/projects?populate=*")
             .then((response) => response.json())
             .then((data) => {
                 setProjects(data.data);

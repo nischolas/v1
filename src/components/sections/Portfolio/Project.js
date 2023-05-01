@@ -212,8 +212,8 @@ export const Project = ({ project }) => {
                 </div>
             </div>
             <a href={url} rel="noreferrer" target="_blank" className="project-image">
-                {/* unoptimized bc strapi for now https://github.com/vercel/next.js/discussions/39239 */}
-                <Image unoptimized={true} src={`http://localhost:1338${imgurl}`} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
+                {/* unoptimized bc of strapi for now https://github.com/vercel/next.js/discussions/39239 */}
+                <Image unoptimized={true} src={`http://localhost:1337${imgurl}`} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
             </a>
         </ProjectListItem>
     );
