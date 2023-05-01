@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FaLink } from "react-icons/fa";
 import { glassStyle } from "src/styles/variables";
 import Image from "next/image";
+import { cmsUrl } from "src/styles/variables";
 import useParallax from "src/hooks/useParallax";
 
 const ProjectListItem = styled("li")`
@@ -186,7 +187,6 @@ const ProjectListItem = styled("li")`
 export const Project = ({ project }) => {
     const { name, type, url, description, image, technologies } = project.attributes;
     const imgurl = image.data.attributes.formats.large.url;
-    console.log(image.data.attributes.formats.large.url);
     return (
         <ProjectListItem className="project">
             <div className="project-content">
@@ -213,7 +213,7 @@ export const Project = ({ project }) => {
             </div>
             <a href={url} rel="noreferrer" target="_blank" className="project-image">
                 {/* unoptimized bc of strapi for now https://github.com/vercel/next.js/discussions/39239 */}
-                <Image unoptimized={true} src={`http://localhost:1337${imgurl}`} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
+                <Image unoptimized={true} src={`${cmsUrl}${imgurl}`} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
             </a>
         </ProjectListItem>
     );

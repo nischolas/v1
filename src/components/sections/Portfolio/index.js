@@ -3,6 +3,7 @@ import { Project } from "./Project.js";
 import styled from "styled-components";
 import { Headline } from "@components/Headline.js";
 import { useEffect, useState } from "react";
+import { cmsUrl } from "src/styles/variables.js";
 
 const PortfolioWrapper = styled.section`
     margin-top: 10rem;
@@ -22,11 +23,10 @@ const ProjectsWrapper = styled.ul`
 export const Portfolio = () => {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:1337/api/projects?populate=*")
+        fetch(`${cmsUrl}/api/projects?populate=*`)
             .then((response) => response.json())
             .then((data) => {
                 setProjects(data.data);
-                // console.log(data.data);
             })
             .catch((error) => console.error(error));
     }, []);
