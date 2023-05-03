@@ -39,10 +39,6 @@ const ProjectListItem = styled("li")`
             grid-row: 1 / 3;
             grid-column: 1 / -1;
         }
-
-        /* &:hover {
-            filter: grayscale(0%) brightness(100%);
-        } */
     }
 
     &:nth-of-type(2n + 1) .project-image {
