@@ -3,7 +3,6 @@ import { FaLink } from "react-icons/fa";
 import { glassStyle } from "src/styles/variables";
 import Image from "next/image";
 import { cmsUrl } from "src/styles/variables";
-import useParallax from "src/hooks/useParallax";
 
 const ProjectListItem = styled("li")`
     display: grid;

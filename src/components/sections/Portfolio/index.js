@@ -1,4 +1,3 @@
-// import { data as projects } from "./data.js";
 import { Project } from "./Project.js";
 import styled from "styled-components";
 import { Headline } from "@components/Headline.js";
