@@ -182,6 +182,14 @@ const ProjectListItem = styled("li")`
 export const Project = ({ project }) => {
     const { name, type, url, description, image, technologies } = project.attributes;
     const imgurl = image.data.attributes.formats.large.url;
+    const cleanUpUrl = (url) => {
+        if (url.startsWith("https://www.")) {
+            return url.replace("https://www.", "");
+        }
+        if (url.startsWith("https://")) {
+            return url.replace("https://", "");
+        }
+    };
     return (
         <ProjectListItem className="project">
             <div className="project-content">
@@ -202,7 +210,7 @@ export const Project = ({ project }) => {
                 <div className="project-link">
                     <FaLink />{" "}
                     <a target="_blank" rel="noreferrer" href={url}>
-                        {url.replace("https://www.", "")}
+                        {cleanUpUrl(url)}
                     </a>
                 </div>
             </div>
