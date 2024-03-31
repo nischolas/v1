@@ -6,7 +6,7 @@ const variables = css`
         --color-main-lighter: #10101a;
         --color-main-lightest: #8892b0;
         --color-white: #e6f1ff;
-        --color-accent: #dd0033;
+        --color-accent: #00f;
         --color-accent-alt: #c40467;
         --color-accent-secondary: #47c2ff;
         --shadow: rgba(2, 12, 27, 0.9);
