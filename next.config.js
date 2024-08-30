@@ -9,6 +9,14 @@ const nextConfig = {
     images: {
         domains: ["localhost"],
     },
+    async rewrites() {
+        return [
+            {
+                source: "/project/:path*",
+                destination: "/api/project/:path*",
+            },
+        ];
+    },
     redirects: async () => [
         {
             source: "/:path*",
@@ -22,10 +30,6 @@ const nextConfig = {
             permanent: true,
         },
     ],
-    // for static export
-    // images: {
-    //     unoptimized: true,
-    // },
 };
 
 module.exports = nextConfig;
