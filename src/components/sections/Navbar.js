@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "@components/Logo";
 import Link from "next/link";
 import { fade } from "src/styles/variables";
+import { glassStyle } from "src/styles/variables";
 
 const StyledHeader = styled.header`
     position: fixed;
@@ -23,18 +24,24 @@ const StyledHeader = styled.header`
         props.scrollDirection === "up" &&
         !props.scrolledToTop &&
         css`
-            background-color: var(--color-main);
             height: var(--nav-height);
-            box-shadow: 0 10px 30px -10px var(--shadow);
         `};
 
     ${(props) =>
         props.scrollDirection === "down" &&
         !props.scrolledToTop &&
         css`
-            height: var(--nav-scroll-height);
-            box-shadow: 0 10px 30px -10px var(--shadow);
-            background-color: var(--color-main);
+            /* height: var(--nav-scroll-height); */
+            /* box-shadow: 0 50px 30px -10px var(--shadow);
+            background-color: var(--color-main); */
+            nav {
+                margin: 3rem auto 0;
+                max-width: 1080px;
+                padding: 0 2rem;
+                border-radius: 2rem;
+                ${glassStyle}
+                background-color: rgba(0,0,0, 0.5);
+            }
         `};
 `;
 
@@ -43,9 +50,13 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 100%;
     font-size: var(--fz-xl);
     font-weight: 800;
     color: var(--color-main-lightest);
+    transition: all 200ms ease-in-out;
+    margin: 0 auto;
+    padding: 0;
 
     @media (max-width: 768px) {
         font-size: var(--fz-md);
