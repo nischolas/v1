@@ -12,13 +12,7 @@ const nextConfig = {
     redirects: async () => [
         {
             source: "/:path*",
-            has: [
-                {
-                    type: "host",
-                    value: "www.nicholas-schneider.de",
-                },
-            ],
-            destination: "https://nicholas-schneider.de/:path*",
+            destination: "https://nicholas-mathi.eu/:path*",
             permanent: true,
         },
     ],
