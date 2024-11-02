@@ -37,9 +37,9 @@ function MyApp({ Component, pageProps }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content="Webentwickler aus Saarbrücken" />
                 <meta charSet="UTF-8" />
-                <title>Nicholas Schneider</title>
+                <title>Nicholas Mathieu</title>
                 <meta name="keywords" content="Webentwicklung, Webentwickler, Etnwicklwe, Programmierer, Webdev, Web Developer, Developer, Freelancer, Freelancing, Saarbrücken, Web 2.0" />
-                <meta name="author" content="Nicholas Schneider" />
+                <meta name="author" content="Nicholas Mathieu" />
                 <link rel="icon" href="/favicon/favicon.ico" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />

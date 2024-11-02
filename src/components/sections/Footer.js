@@ -199,7 +199,7 @@ export const Footer = () => {
                     </ul>
                 </div>
             </StyledFooter>
-            <Credits>Entworfen und entwickelt von Nicholas Schneider</Credits>
+            <Credits>Entworfen und entwickelt von Nicholas Mathieu</Credits>
         </Container>
     );
 };
