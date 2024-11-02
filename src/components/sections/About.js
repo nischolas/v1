@@ -133,7 +133,7 @@ export const About = () => {
                     </div>
                 </div>
                 <div className="about-img">
-                    <Image src={isMobile ? "/img/portrait-mobile.png" : "/img/portrait.png"} layout="fill" objectFit="cover" alt="Portrait Nicholas Schneider" />
+                    <Image src={isMobile ? "/img/portrait-mobile.png" : "/img/portrait.png"} layout="fill" objectFit="cover" alt="Portrait Nicholas Mathieu" />
                 </div>
             </div>
         </AboutWrapper>

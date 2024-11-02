@@ -9,7 +9,7 @@ export default function Home() {
 
                 <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
                 <p>
-                    Nicholas Schneider
+                    Nicholas Mathieu
                     <br />
                     Scheidter Str. 127
                     <br />

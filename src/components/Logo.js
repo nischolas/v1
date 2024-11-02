@@ -107,10 +107,10 @@ export const Logo = ({ notext, color }) => {
                     <p>
                         Nicholas
                         <br />
-                        Schneider
+                        Mathieu
                     </p>
                 ) : (
-                    <p>Nicholas Schneider</p>
+                    <p>Nicholas Mathieu</p>
                 )}
             </LogoContainer>
         </Link>

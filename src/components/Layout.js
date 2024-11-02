@@ -13,7 +13,7 @@ export const Layout = ({ children, title, noBg }) => {
     return (
         <>
             <Head>
-                <title>{`${title ? title + " | " : ""}Nicholas Schneider`}</title>
+                <title>{`${title ? title + " | " : ""}Nicholas Mathieu`}</title>
             </Head>
             {!noBg && <Background />}
             <Cursor />
