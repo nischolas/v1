@@ -96,7 +96,7 @@ export const Hero = () => {
                 Ich entwickle{isMobile ? <br /> : " "}
                 {<WordCycler words={words} />}
             </h1>
-            <p>
+            <p style={{ maxWidth: "60ch" }}>
                 Ich bin Frontend- und bei Bedarf auch Backend-Entwickler aus Saarbrücken, spezialisiert auf&apos;s Entwerfen und Entwickeln von Webseiten, Applikationen und allem, was dazwischen
                 liegt.
             </p>

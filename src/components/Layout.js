@@ -24,13 +24,13 @@ export const Layout = ({ children, title, noBg }) => {
                 <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
             </SideInfo>
             <SideInfo pos={"left"}>
-                <a target="_blank" rel="noreferrer" href="https://github.com/nchlsschndr">
+                <a target="_blank" rel="noreferrer" href="https://github.com/nischolas">
                     <FaGithub />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/nchlsschndr/">
+                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/nchlsmth/">
                     <FaInstagram />
                 </a>
-                <a target="_blank" rel="noreferrer" href="https://codepen.io/nchlsschndr">
+                <a target="_blank" rel="noreferrer" href="https://codepen.io/nischolas">
                     <FaCodepen />
                 </a>
                 <a target="_blank" rel="noreferrer" href="https://open.spotify.com/user/1135788776">
