@@ -107,7 +107,7 @@ export const About = () => {
     return (
         <AboutWrapper id="ueber-mich">
             <div className="split">
-                <Headline text="Das bin ich" />
+                <Headline text="Über mich" />
                 <div className="about-text">
                     <p>Hey, ich bin leidenschaftlicher Webentwickler und arbeite daran, das Internet ein bisschen schöner und bedienbarer zu machen.</p>
                     <p>
@@ -119,8 +119,8 @@ export const About = () => {
                     <p>Diese Tools setze ich unter anderem ein:</p>
                     <div className="tools-wrapper">
                         <ul>
-                            <li>React</li>
-                            <li>Next.js</li>
+                            <li>React/Next</li>
+                            <li>Vue/Nuxt</li>
                             <li>Astro JS</li>
                             <li>Python</li>
                         </ul>

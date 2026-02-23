@@ -88,12 +88,12 @@ const WordCycler = ({ words }) => {
 export const Hero = () => {
     const isMobile = useIsViewportLessThanWidth();
     // max 14 chars
-    const words = ["Webseiten", "Layouts", "Web-Apps", "Landingpages", "Interaktivität"];
+    const words = ["Webseiten", "Lösungen", "Web-Apps", "Interaktivität", "Landingpages", "Tools"];
     return (
         <HeroSection id="start">
             <h3>Hallo, ich bin Nicholas</h3>
-            <h1 title="Ich baue Webseiten.">
-                Ich baue{isMobile ? <br /> : " "}
+            <h1 title="Ich entwickele Webseiten.">
+                Ich entwickle{isMobile ? <br /> : " "}
                 {<WordCycler words={words} />}
             </h1>
             <p>

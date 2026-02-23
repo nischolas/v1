@@ -63,7 +63,6 @@ const fadeIn = keyframes`
 `;
 
 export const loadingDuration = process.env.NODE_ENV === "production" ? 1700 : 200;
-export const cmsUrl = process.env.NODE_ENV === "production" ? "https://admin.nicholas-schneider.de" : "https://admin.nicholas-schneider.de";
 
 export const loadingAni1Duration = loadingDuration / 1.7;
 export const loadingAni2Duration = loadingDuration / 3.4;

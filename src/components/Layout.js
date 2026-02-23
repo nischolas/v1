@@ -48,7 +48,7 @@ export const Layout = ({ children, title, noBg }) => {
 
 export const Container = styled.main`
     padding: 0 var(--padding-inner);
-    max-width: 1400px;
+    max-width: 1530px;
     margin: 0 auto;
     @media (max-width: 768px) {
         padding: var(--padding-mobile);
