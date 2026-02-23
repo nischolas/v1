@@ -47,8 +47,14 @@ export const glassStyle = css`
 `;
 
 export const textOnBg = css`
-    text-shadow: 0px 0px 0.25rem var(--color-main), 0px 0px 0.25rem var(--color-main), 0px 0px 0.25rem var(--color-main), 0.25rem 0.25rem 10px var(--color-main),
-        0.25rem -0.25rem 10px var(--color-main), -0.25rem -0.25rem 10px var(--color-main), -0.25rem 0.25rem 10px var(--color-main);
+    text-shadow:
+        0px 0px 0.25rem var(--color-main),
+        0px 0px 0.25rem var(--color-main),
+        0px 0px 0.25rem var(--color-main),
+        0.25rem 0.25rem 10px var(--color-main),
+        0.25rem -0.25rem 10px var(--color-main),
+        -0.25rem -0.25rem 10px var(--color-main),
+        -0.25rem 0.25rem 10px var(--color-main);
 `;
 
 const fadeIn = keyframes`
@@ -57,7 +63,7 @@ const fadeIn = keyframes`
 `;
 
 export const loadingDuration = process.env.NODE_ENV === "production" ? 1700 : 200;
-export const cmsUrl = process.env.NODE_ENV === "production" ? "https://admin.nicholas-schneider.de" : "http://localhost:1337";
+export const cmsUrl = process.env.NODE_ENV === "production" ? "https://admin.nicholas-schneider.de" : "https://admin.nicholas-schneider.de";
 
 export const loadingAni1Duration = loadingDuration / 1.7;
 export const loadingAni2Duration = loadingDuration / 3.4;

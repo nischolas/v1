@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Heiraten mit Bernd",
+        "type": "Webseite",
+        "url": "https://www.heiraten-mit-bernd.de",
+        "description": "Eine Hochzeitsredner-Webseite. Von Grund auf und mit Liebe von Hand geschrieben, für die persönliche Note.",
+        "image": "/images/projects/heiraten-mit-bernd.png",
+        "technologies": ["SCSS", "HTML5"]
+    },
+    {
+        "id": 2,
+        "name": "Spotify Streamingverlauf",
+        "type": "Web App",
+        "url": "https://spotify.nicholas-mathi.eu",
+        "description": "Schlüsselt deinen Erweiterten Streamingverlauf und deine Hörgewohnheiten lokal im Browser auf.",
+        "image": "/images/projects/spotify-streamingverlauf.png",
+        "technologies": ["Vite", "React", "i18n"]
+    },
+    {
+        "id": 4,
+        "name": "AT Performance",
+        "type": "Webseite",
+        "url": "https://atp.nicholas-mathi.eu",
+        "description": "Moderne Autoverleih-Webseite mit intuitiver Benutzeroberfläche und modernem Look.",
+        "image": "/images/projects/at-performance.png",
+        "technologies": ["React.js & Next.js", "SCSS"]
+    },
+    {
+        "id": 3,
+        "name": "Dieses Portfolio",
+        "type": "Webseite",
+        "url": "https://www.github.com/nischolas/v1",
+        "description": "Mein Portfolio, das nach den aktuellen Best Practices der Webentwicklung erstellt wurde. Open Source.",
+        "image": "/images/projects/nicholas-schneider.png",
+        "technologies": ["React.js & Next.js", "Styled Components", "Strapi CMS"]
+    }
+]

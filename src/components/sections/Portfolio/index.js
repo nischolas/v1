@@ -1,8 +1,7 @@
 import { Project } from "./Project.js";
 import styled from "styled-components";
 import { Headline } from "@components/Headline.js";
-import { useEffect, useState } from "react";
-import { cmsUrl } from "src/styles/variables.js";
+import projects from "@data/projects.json";
 
 const PortfolioWrapper = styled.section`
     margin-top: 10rem;
@@ -20,21 +19,12 @@ const ProjectsWrapper = styled.ul`
 `;
 
 export const Portfolio = () => {
-    const [projects, setProjects] = useState([]);
-    useEffect(() => {
-        fetch(`${cmsUrl}/api/projects?populate=*`)
-            .then((response) => response.json())
-            .then((data) => {
-                setProjects(data.data);
-            })
-            .catch((error) => console.error(error));
-    }, []);
     return (
         <PortfolioWrapper id="portfolio">
-            <Headline text="Mein Portfolio" sub="Eine Auwahl meiner aktuellen Projekte" />
+            <Headline text="Portfolio" sub="Eine Auwahl meiner aktuellen Projekte" />
 
             <ProjectsWrapper>
-                {projects.map((project, index) => (
+                {projects.map((project) => (
                     <Project key={project.id} project={project} />
                 ))}
             </ProjectsWrapper>

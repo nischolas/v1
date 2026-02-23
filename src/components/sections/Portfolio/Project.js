@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { FaLink } from "react-icons/fa";
 import { glassStyle } from "src/styles/variables";
 import Image from "next/image";
-import { cmsUrl } from "src/styles/variables";
 
 const ProjectListItem = styled("li")`
     display: grid;
@@ -180,8 +179,8 @@ const ProjectListItem = styled("li")`
 `;
 
 export const Project = ({ project }) => {
-    const { name, type, url, description, image, technologies } = project.attributes;
-    const imgurl = image.data.attributes.formats.large.url;
+    const { name, type, url, description, image, technologies } = project;
+    const imgurl = image;
     const cleanUpUrl = (url) => {
         if (url.startsWith("https://www.")) {
             return url.replace("https://www.", "");
@@ -203,8 +202,8 @@ export const Project = ({ project }) => {
                     <p>{description}</p>
                 </div>
                 <ul className="project-tech-list">
-                    {technologies.data.map((tech) => (
-                        <li key={tech.id}>{tech.attributes.name}</li>
+                    {technologies.map((tech, index) => (
+                        <li key={index}>{tech}</li>
                     ))}
                 </ul>
                 <div className="project-link">
@@ -215,8 +214,7 @@ export const Project = ({ project }) => {
                 </div>
             </div>
             <a href={url} rel="noreferrer" target="_blank" className="project-image">
-                {/* unoptimized bc of strapi for now https://github.com/vercel/next.js/discussions/39239 */}
-                <Image unoptimized={true} src={`${cmsUrl}${imgurl}`} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
+                <Image unoptimized={true} src={imgurl} layout="fill" objectFit="cover" alt={`Screenshot ${type} ${name}`} />
             </a>
         </ProjectListItem>
     );
