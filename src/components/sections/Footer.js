@@ -9,6 +9,8 @@ const Container = styled.div`
     padding: 0 var(--padding-inner);
     max-width: 1400px;
     margin: 0 auto;
+    scroll-margin-top: 10rem;
+
     @media (max-width: 768px) {
         padding: var(--padding-mobile);
     }
@@ -119,16 +121,16 @@ const Credits = styled.p`
 
 export const Footer = () => {
     return (
-        <Container>
+        <Container id="kontakt">
             <StyledContact>
                 <Headline center text="Worauf wartest Du?" />
                 <h3>Ich bin immer auf der Suche nach neuen und herausfordernden Projekten.</h3>
-                <CtaBtn href="mailto:hallo@nicholas-schneider.de">
+                <CtaBtn href="mailto:hallo@nicholas-mathi.eu">
                     Sag hallo!
                     <FaPaperPlane />
                 </CtaBtn>
             </StyledContact>
-            <StyledFooter id="kontakt">
+            <StyledFooter>
                 <div className="lists">
                     <div className="social-links">
                         <Logo notext color={"var(--color-white)"} />
@@ -150,7 +152,7 @@ export const Footer = () => {
                     <ul>
                         <li>Kontakt</li>
                         <li>
-                            <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
+                            <a href="mailto:hallo@nicholas-mathi.eu">hallo@nicholas-mathi.eu</a>
                         </li>
                     </ul>
                     <ul>

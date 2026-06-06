@@ -18,7 +18,7 @@ export default function Home() {
 
                 <h2>Kontakt</h2>
                 <p>
-                    E-Mail: <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
+                    E-Mail: <a href="mailto:hallo@nicholas-mathi.eu">hallo@nicholas-mathi.eu</a>
                 </p>
 
                 <br />

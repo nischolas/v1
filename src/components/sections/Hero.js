@@ -10,6 +10,7 @@ const HeroSection = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    scroll-margin-top: 7rem;
 
     h1,
     h2,
@@ -103,7 +104,7 @@ export const Hero = () => {
                 Ich bin Frontend- und bei Bedarf auch Backend-Entwickler aus Saarbrücken, spezialisiert auf&apos;s Entwerfen und Entwickeln von Webseiten, Applikationen und allem, was dazwischen
                 liegt.
             </p>
-            <CtaBtn href={"mailto:hallo@nicholas-schneider.de"}>
+            <CtaBtn href={"mailto:hallo@nicholas-mathi.eu"}>
                 Sag hallo!
                 <FaPaperPlane />
             </CtaBtn>

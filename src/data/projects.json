@@ -3,19 +3,19 @@
         "id": 1,
         "name": "Heiraten mit Bernd",
         "type": "Webseite",
-        "url": "https://www.heiraten-mit-bernd.de?utm_source=nicholas-mathi.eu",
+        "url": "https://www.heiraten-mit-bernd.de",
         "description": "Eine Hochzeitsredner-Webseite. Von Grund auf und mit Liebe von Hand geschrieben, für die persönliche Note.",
         "image": "/images/projects/heiraten-mit-bernd.png",
-        "technologies": ["Astro", "SCSS"]
+        "technologies": ["Astro", "Blog", "SSG"]
     },
     {
         "id": 2,
         "name": "Spotify Streamingverlauf",
         "type": "Web App",
         "url": "https://spotify.nicholas-mathi.eu",
-        "description": "Schlüsselt deinen Erweiterten Streamingverlauf und deine Hörgewohnheiten lokal im Browser auf.",
+        "description": "Schlüsselt den Erweiterten Streamingverlauf und Hörgewohnheiten lokal im Browser auf.",
         "image": "/images/projects/spotify-streamingverlauf.png",
-        "technologies": ["PWA", "Data Science", "React"]
+        "technologies": ["PWA", "React", "Data Science"]
     },
     {
         "id": 4,

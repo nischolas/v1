@@ -83,7 +83,7 @@ export default function Home() {
                     <br />
                     66123 Saarbr&uuml;cken
                 </p>
-                <p>E-Mail: hallo@nicholas-schneider.de</p>
+                <p>E-Mail: hallo@nicholas-mathi.eu</p>
                 <p>
                     Verantwortliche Stelle ist die nat&uuml;rliche oder juristische Person, die allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen
                     Daten (z.&nbsp;B. Namen, E-Mail-Adressen o. &Auml;.) entscheidet.

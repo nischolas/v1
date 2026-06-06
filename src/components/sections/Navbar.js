@@ -95,10 +95,6 @@ const StyledNav = styled.nav`
     }
 `;
 
-const StyledNavLink = styled(Link)`
-    color: red !important;
-`;
-
 export const Navbar = () => {
     const scrollDirection = useScrollDirection("down");
     const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -121,19 +117,13 @@ export const Navbar = () => {
                 <div className="links">
                     <ul>
                         <li>
-                            <StyledNavLink href="/#ueber-mich">
-                                <a>Über mich</a>
-                            </StyledNavLink>
+                            <a href="#ueber-mich">Über mich</a>
                         </li>
                         <li>
-                            <StyledNavLink href="/#portfolio">
-                                <a>Portfolio</a>
-                            </StyledNavLink>
+                            <a href="#portfolio">Portfolio</a>
                         </li>
                         <li>
-                            <StyledNavLink href="/#kontakt">
-                                <a>Kontakt</a>
-                            </StyledNavLink>
+                            <a href="#kontakt">Kontakt</a>
                         </li>
                     </ul>
                 </div>

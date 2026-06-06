@@ -5,6 +5,7 @@ import projects from "@data/projects.json";
 
 const PortfolioWrapper = styled.section`
     margin-top: 10rem;
+    scroll-margin-top: 7rem;
 `;
 
 const ProjectsWrapper = styled.ul`

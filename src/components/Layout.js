@@ -21,7 +21,7 @@ export const Layout = ({ children, title, noBg }) => {
 
             <Navbar />
             <SideInfo pos={"right"}>
-                <a href="mailto:hallo@nicholas-schneider.de">hallo@nicholas-schneider.de</a>
+                <a href="mailto:hallo@nicholas-mathi.eu">hallo@nicholas-mathi.eu</a>
             </SideInfo>
             <SideInfo pos={"left"}>
                 <a target="_blank" rel="noreferrer" href="https://github.com/nischolas">

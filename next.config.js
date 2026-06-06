@@ -9,23 +9,6 @@ const nextConfig = {
     images: {
         domains: ["localhost"],
     },
-    redirects: async () => [
-        {
-            source: "/:path*",
-            has: [
-                {
-                    type: "host",
-                    value: "www.nicholas-schneider.de",
-                },
-            ],
-            destination: "https://nicholas-schneider.de/:path*",
-            permanent: true,
-        },
-    ],
-    // for static export
-    // images: {
-    //     unoptimized: true,
-    // },
 };
 
 module.exports = nextConfig;

@@ -6,6 +6,7 @@ import useIsViewportLessThanWidth from "src/hooks/useIsMobile";
 
 const AboutWrapper = styled.section`
     margin-top: 10rem;
+    scroll-margin-top: 7rem;
 
     .split {
         display: grid;
