@@ -1,7 +1,7 @@
 import { CtaBtn } from "@components/CtaBtn";
 import { Headline } from "@components/Headline";
 import { Logo } from "@components/Logo";
-import { FaCodepen, FaGithub, FaInstagram, FaPaperPlane, FaSpotify } from "react-icons/fa";
+import { FaCodepen, FaGithub, FaInstagram, FaLinkedin, FaPaperPlane, FaSpotify } from "react-icons/fa";
 import styled from "styled-components";
 import { glassStyle, textOnBg } from "src/styles/variables";
 
@@ -51,7 +51,7 @@ const StyledFooter = styled.footer`
             @media (max-width: 768px) {
                 font-size: var(--fz-md);
             }
-            width: 25%;
+            /* width: 25%; */
         }
         .icon-links {
         }
@@ -135,13 +135,13 @@ export const Footer = () => {
                     <div className="social-links">
                         <Logo notext color={"var(--color-white)"} />
                         <div className="icon-links">
-                            <a target="_blank" rel="noreferrer" href="https://github.com/nchlsschndr">
+                            <a target="_blank" rel="noreferrer" href="https://github.com/nischolas">
                                 <FaGithub />
                             </a>
-                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/nchlsschndr/">
+                            <a target="_blank" rel="noreferrer" href="https://www.instagram.com/nchlsmth/">
                                 <FaInstagram />
                             </a>
-                            <a target="_blank" rel="noreferrer" href="https://codepen.io/nchlsschndr">
+                            <a target="_blank" rel="noreferrer" href="https://codepen.io/nischolas">
                                 <FaCodepen />
                             </a>
                             <a target="_blank" rel="noreferrer" href="https://open.spotify.com/user/1135788776">
@@ -152,13 +152,18 @@ export const Footer = () => {
                     <ul>
                         <li>Kontakt</li>
                         <li>
-                            <a href="mailto:hallo@nicholas-mathi.eu">hallo@nicholas-mathi.eu</a>
+                            <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/nicholas-mathieu/">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:hallo@nicholas-mathi.eu">E&#8209;Mail</a>
                         </li>
                     </ul>
                     <ul>
                         <li>Navigation</li>
                         <li>
-                            <a href="#start">Nach oben</a>
+                            <a href="#start">Start</a>
                         </li>
                         <li>
                             <a href="#ueber-mich">Über mich</a>

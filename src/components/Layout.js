@@ -4,7 +4,7 @@ import { Navbar } from "src/components/sections/Navbar";
 import styled from "styled-components";
 import { SideInfo } from "./SideInfo";
 import { Background } from "./Background";
-import { FaInstagram, FaGithub, FaCodepen, FaSpotify } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaCodepen, FaSpotify, FaLinkedin } from "react-icons/fa";
 import { Cursor } from "./Cursor";
 import ScrollReveal from "./ScrollReveal";
 import CookieBanner from "src/components/CookieBanner";
@@ -24,6 +24,9 @@ export const Layout = ({ children, title, noBg }) => {
                 <a href="mailto:hallo@nicholas-mathi.eu">hallo@nicholas-mathi.eu</a>
             </SideInfo>
             <SideInfo pos={"left"}>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/nicholas-mathieu/">
+                    <FaLinkedin />
+                </a>
                 <a target="_blank" rel="noreferrer" href="https://github.com/nischolas">
                     <FaGithub />
                 </a>
