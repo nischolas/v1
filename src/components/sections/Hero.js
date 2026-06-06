@@ -22,6 +22,8 @@ const HeroSection = styled.section`
         font-size: clamp(50px, 9vw, 90px);
         color: var(--color-main-lightest);
         font-weight: 800;
+        line-height: 1;
+        margin-bottom: 1rem;
         ${fade(5)};
     }
 
@@ -30,6 +32,7 @@ const HeroSection = styled.section`
         margin-top: -0.5rem;
         font-weight: 800;
         font-size: clamp(var(--fz-xxl), 3vw, var(--fz-heading));
+        margin-bottom: 1rem;
         ${fade(4)};
     }
     p {
